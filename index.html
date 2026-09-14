@@ -76,9 +76,11 @@ tr.avg td{background:#EAF2FF;font-family:'Fraunces';font-weight:900;font-size:24
 .day{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px;box-shadow:0 14px 30px -20px rgba(10,20,40,.20);position:relative;overflow:hidden}
 .day .d{font-family:'Inter Tight';font-weight:800;font-size:16px;letter-spacing:.06em;color:#5B6B85;text-transform:uppercase}
 .day .bud{font-family:'Fraunces';font-weight:900;font-size:60px;color:var(--blue);line-height:1;margin:8px 0 10px;letter-spacing:-.03em}
-.day .row{display:flex;justify-content:space-between;align-items:baseline;gap:6px;padding:10px 0;border-top:1px solid var(--line);font-weight:700;font-size:15px;color:#5B6B85}
-.day .row b{font-family:'Fraunces';font-weight:900;font-size:22px;color:var(--ink);white-space:nowrap}
-.day .d{padding-right:60px}
+.day .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 0;border-top:1px solid var(--line);font-weight:700;font-size:13px;color:#5B6B85;text-transform:uppercase;letter-spacing:.04em}
+.day .row b{font-family:'Fraunces';font-weight:900;font-size:20px;color:var(--ink);white-space:nowrap;letter-spacing:-.01em}
+.day .d{padding-right:0;font-size:14px}
+.day.today .d{padding-right:70px}
+.day .bud{font-size:52px}
 .day.today{background:linear-gradient(180deg,#EAF2FF,#F8FBFF);border-color:#B7D6FF}
 .day.today::after{content:"TODAY";position:absolute;top:14px;right:14px;background:var(--ink);color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;padding:5px 10px;border-radius:999px}
 
@@ -209,43 +211,43 @@ footer{margin:100px 0 40px;color:#5B6B85;font-size:16px;text-align:center}
     <p>Budget rises only if the previous day held CTR ≥ 1.5% and cost per LPV ≤ $1.75. The plan totals $2,440 of the $3,500 authorised ceiling, leaving $1,060 in reserve for a mid-week creative or audience push if needed.</p>
   </div>
   <div class="plan">
-    <div class="day today"><div class="d">Mon · Sep 14</div><div class="bud">$180</div>
+    <div class="day today"><div class="d">Mon 14</div><div class="bud">$180</div>
       <div class="row"><span>Impressions</span><b>8,407</b></div>
       <div class="row"><span>Link clicks</span><b>135</b></div>
       <div class="row"><span>LPV</span><b>119</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Tue · Sep 15</div><div class="bud">$220</div>
+    <div class="day"><div class="d">Tue 15</div><div class="bud">$220</div>
       <div class="row"><span>Impressions</span><b>10,275</b></div>
       <div class="row"><span>Link clicks</span><b>165</b></div>
       <div class="row"><span>LPV</span><b>145</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Wed · Sep 16</div><div class="bud">$280</div>
+    <div class="day"><div class="d">Wed 16</div><div class="bud">$280</div>
       <div class="row"><span>Impressions</span><b>13,077</b></div>
       <div class="row"><span>Link clicks</span><b>210</b></div>
       <div class="row"><span>LPV</span><b>184</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Thu · Sep 17</div><div class="bud">$340</div>
+    <div class="day"><div class="d">Thu 17</div><div class="bud">$340</div>
       <div class="row"><span>Impressions</span><b>15,880</b></div>
       <div class="row"><span>Link clicks</span><b>255</b></div>
       <div class="row"><span>LPV</span><b>224</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Fri · Sep 18</div><div class="bud">$420</div>
+    <div class="day"><div class="d">Fri 18</div><div class="bud">$420</div>
       <div class="row"><span>Impressions</span><b>19,617</b></div>
       <div class="row"><span>Link clicks</span><b>315</b></div>
       <div class="row"><span>LPV</span><b>277</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Sat · Sep 19</div><div class="bud">$500</div>
+    <div class="day"><div class="d">Sat 19</div><div class="bud">$500</div>
       <div class="row"><span>Impressions</span><b>23,353</b></div>
       <div class="row"><span>Link clicks</span><b>375</b></div>
       <div class="row"><span>LPV</span><b>330</b></div>
       <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
     </div>
-    <div class="day"><div class="d">Sun · Sep 20</div><div class="bud">$500</div>
+    <div class="day"><div class="d">Sun 20</div><div class="bud">$500</div>
       <div class="row"><span>Impressions</span><b>23,353</b></div>
       <div class="row"><span>Link clicks</span><b>375</b></div>
       <div class="row"><span>LPV</span><b>330</b></div>
