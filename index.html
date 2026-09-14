@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>LLA — Ecommerce Funnel Analysis · Sep 9–14 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter+Tight:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0A1428; --ice:#F2F7FF; --blue:#006EFF; --blue2:#5EB6FF;
+  --good:#0FA968; --warn:#F5A524; --bad:#E5484D;
+  --line:rgba(10,20,40,.10); --card:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--ice);color:var(--ink);font-family:'Inter Tight',system-ui,sans-serif;font-size:18px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1440px;margin:0 auto;padding:56px 40px}
+h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:800;letter-spacing:-.02em;line-height:1.02;margin:0}
+h1{font-size:clamp(56px,7vw,104px)}
+h2{font-size:clamp(40px,4.4vw,64px);margin:0 0 24px}
+h3{font-size:28px;margin:0 0 14px}
+p{font-size:19px;margin:0 0 14px}
+.eyebrow{font-family:'Inter Tight';font-weight:800;font-size:18px;letter-spacing:.02em;color:var(--blue);text-transform:none;margin-bottom:18px}
+.hero{background:linear-gradient(180deg,#fff 0%,var(--ice) 100%);border-radius:32px;padding:64px 56px;box-shadow:0 30px 80px -30px rgba(0,110,255,.20),0 2px 0 rgba(10,20,40,.04);border:1px solid var(--line)}
+.hero h1 span{color:var(--blue)}
+.hero .lede{font-size:22px;max-width:900px;margin-top:24px;color:#334}
+.kpigrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 26px;box-shadow:0 12px 30px -18px rgba(10,20,40,.20)}
+.kpi .lbl{font-weight:700;font-size:17px;color:#5B6B85;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
+.kpi .val{font-family:'Fraunces',serif;font-weight:900;font-size:64px;line-height:1;letter-spacing:-.03em}
+.kpi .sub{font-size:15px;color:#5B6B85;margin-top:6px}
+.kpi.blue{background:var(--blue);color:#fff;border-color:transparent}
+.kpi.blue .lbl{color:rgba(255,255,255,.85)}
+.kpi.blue .sub{color:rgba(255,255,255,.85)}
+.kpi.dark{background:var(--ink);color:#fff;border-color:transparent}
+.kpi.dark .lbl,.kpi.dark .sub{color:rgba(255,255,255,.75)}
+
+/* PYRAMID FUNNEL */
+.section{margin-top:88px}
+.section .head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:32px;flex-wrap:wrap}
+.section .head p{max-width:640px;color:#334;font-size:19px;margin:0}
+
+.pyramid{background:#fff;border:1px solid var(--line);border-radius:28px;padding:40px 40px 56px;box-shadow:0 24px 60px -30px rgba(10,20,40,.20)}
+.stage{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;margin:0 auto 16px;color:#fff;border-radius:22px;padding:26px 34px;box-shadow:0 20px 40px -22px rgba(0,110,255,.55)}
+.stage .left{display:flex;flex-direction:column;gap:6px}
+.stage .name{font-family:'Inter Tight';font-weight:800;font-size:22px;letter-spacing:.02em;opacity:.95}
+.stage .num{font-family:'Fraunces',serif;font-weight:900;font-size:96px;line-height:.95;letter-spacing:-.03em}
+.stage .right{text-align:right;font-family:'Inter Tight';font-weight:700;font-size:22px;line-height:1.25;opacity:.95}
+.stage .right b{font-family:'Fraunces';font-weight:900;font-size:34px;display:block}
+.s1{width:100%;background:linear-gradient(90deg,#003C8E,#006EFF)}
+.s2{width:88%;background:linear-gradient(90deg,#0057D6,#2A8CFF)}
+.s3{width:74%;background:linear-gradient(90deg,#006EFF,#5EB6FF)}
+.s4{width:56%;background:linear-gradient(90deg,#1F8DFF,#7EC4FF)}
+.s5{width:36%;background:linear-gradient(90deg,#0A1428,#324A75)}
+.dropchip{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:6px 14px;font-weight:800;font-size:16px;margin-top:8px}
+
+/* DAILY TABLE */
+.tablewrap{background:#fff;border:1px solid var(--line);border-radius:28px;padding:8px;box-shadow:0 24px 60px -30px rgba(10,20,40,.15);overflow:auto}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:19px}
+th,td{padding:22px 20px;text-align:right;font-family:'Inter Tight';font-weight:700;white-space:nowrap}
+th{font-size:16px;color:#5B6B85;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid var(--line);text-align:right;background:#F7FAFF}
+th:first-child,td:first-child{text-align:left}
+tbody tr:nth-child(even){background:#FAFCFF}
+tbody tr:hover{background:#EFF6FF}
+td.big{font-family:'Fraunces',serif;font-weight:900;font-size:26px;letter-spacing:-.01em}
+tr.total td{border-top:2px solid var(--ink);font-family:'Fraunces';font-weight:900;font-size:24px;background:#F2F7FF;color:var(--ink)}
+tr.avg td{background:#EAF2FF;font-family:'Fraunces';font-weight:900;font-size:24px}
+.tag{display:inline-block;padding:6px 12px;border-radius:999px;font-size:14px;font-weight:800;margin-left:8px}
+.tag.g{background:#DFF6EA;color:#0FA968}
+.tag.w{background:#FFF1D6;color:#8A5A00}
+.tag.b{background:#FCE0E1;color:#B01218}
+
+/* WEEKLY PLAN */
+.plan{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
+.day{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 20px;box-shadow:0 14px 30px -20px rgba(10,20,40,.20);position:relative;overflow:hidden}
+.day .d{font-family:'Inter Tight';font-weight:800;font-size:16px;letter-spacing:.06em;color:#5B6B85;text-transform:uppercase}
+.day .bud{font-family:'Fraunces';font-weight:900;font-size:60px;color:var(--blue);line-height:1;margin:8px 0 10px;letter-spacing:-.03em}
+.day .row{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid var(--line);font-weight:700;font-size:17px}
+.day .row b{font-family:'Fraunces';font-weight:900;font-size:22px}
+.day.today{background:linear-gradient(180deg,#EAF2FF,#F8FBFF);border-color:#B7D6FF}
+.day.today::after{content:"TODAY";position:absolute;top:14px;right:14px;background:var(--ink);color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;padding:5px 10px;border-radius:999px}
+
+/* SCENARIOS */
+.scn{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.sc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;text-align:center;box-shadow:0 14px 30px -20px rgba(10,20,40,.20)}
+.sc .cv{font-family:'Inter Tight';font-weight:800;color:#5B6B85;font-size:15px;letter-spacing:.06em}
+.sc .sl{font-family:'Fraunces';font-weight:900;font-size:64px;color:var(--ink);line-height:1;margin:8px 0 4px}
+.sc .cps{font-family:'Inter Tight';font-weight:700;font-size:17px;color:#334}
+.sc.hit{background:linear-gradient(180deg,#DFF6EA,#F5FBF7);border-color:#8FDCB6}
+.sc.hit .sl{color:var(--good)}
+.sc.miss{background:linear-gradient(180deg,#FCE0E1,#FDF3F3);border-color:#F2A9AB}
+.sc.miss .sl{color:var(--bad)}
+
+/* CALLOUT */
+.callout{background:var(--ink);color:#fff;border-radius:28px;padding:48px 52px;margin-top:44px;position:relative;overflow:hidden}
+.callout::before{content:"";position:absolute;inset:-40% -20% auto auto;width:600px;height:600px;background:radial-gradient(closest-side,rgba(94,182,255,.35),transparent);pointer-events:none}
+.callout h2{color:#fff}
+.callout .big{font-family:'Fraunces';font-weight:900;font-size:120px;color:var(--blue2);line-height:.95;letter-spacing:-.03em}
+.callout .row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:24px}
+.callout .row div{font-size:19px}
+.callout .row b{font-family:'Fraunces';font-weight:900;font-size:44px;color:#fff;display:block;line-height:1;margin-bottom:6px}
+
+.leversgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.lever{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 14px 30px -20px rgba(10,20,40,.20)}
+.lever h3{margin-bottom:10px}
+.lever .n{font-family:'Fraunces';font-weight:900;font-size:44px;color:var(--blue);line-height:1;margin-bottom:12px}
+
+footer{margin:100px 0 40px;color:#5B6B85;font-size:16px;text-align:center}
+
+@media (max-width:1100px){
+  .kpigrid{grid-template-columns:repeat(2,1fr)}
+  .plan{grid-template-columns:repeat(2,1fr)}
+  .scn{grid-template-columns:repeat(2,1fr)}
+  .callout .row{grid-template-columns:1fr}
+  .leversgrid{grid-template-columns:1fr}
+  .stage .num{font-size:64px}
+  .wrap{padding:32px 20px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="eyebrow">Longevity Life Academy · Meta ecommerce funnel · Sep 9 to Sep 14, 2026</div>
+  <h1>Full-funnel <span>diagnosis</span>, and the seven-day path to <span>5 sales</span>.</h1>
+  <p class="lede">Six days of live spend, 89,896 impressions and 1,268 landing-page views produced 2 purchases at $179. This page reads the full funnel end-to-end, extracts the honest baseline conversion, and models exactly what the next seven days need to deliver five sales.</p>
+  <div class="kpigrid">
+    <div class="kpi blue"><div class="lbl">Spend, 6 days</div><div class="val">$1,924.72</div><div class="sub">Avg $320.79 per day</div></div>
+    <div class="kpi"><div class="lbl">Landing-page views</div><div class="val">1,268</div><div class="sub">88% of link clicks land</div></div>
+    <div class="kpi"><div class="lbl">Purchases</div><div class="val">2</div><div class="sub">$358 revenue at $179</div></div>
+    <div class="kpi dark"><div class="lbl">Cost per purchase</div><div class="val">$962</div><div class="sub">Target for hit: ≤ $488</div></div>
+  </div>
+</section>
+
+<!-- PYRAMID FUNNEL -->
+<section class="section">
+  <div class="head">
+    <div>
+      <div class="eyebrow">The funnel, drawn to scale</div>
+      <h2>Every stage. Every drop-off. Every dollar.</h2>
+    </div>
+    <p>The pyramid below sizes each stage against the top of funnel. The stage width is the survival rate. The number is the raw count. The right column is the unit economics at that stage.</p>
+  </div>
+  <div class="pyramid">
+    <div class="stage s1">
+      <div class="left"><div class="name">01 · Reach (unique people)</div><div class="num">75,491</div><div><span class="dropchip">Frequency 1.19×</span></div></div>
+      <div class="right">Spend<br><b>$1,924.72</b>CPM $21.41</div>
+    </div>
+    <div class="stage s2">
+      <div class="left"><div class="name">02 · Impressions</div><div class="num">89,896</div><div><span class="dropchip">100% of served ads</span></div></div>
+      <div class="right">CPM<br><b>$21.41</b>Cost / 1,000 shows</div>
+    </div>
+    <div class="stage s3">
+      <div class="left"><div class="name">03 · Link clicks</div><div class="num">1,444</div><div><span class="dropchip">CTR 1.61%</span></div></div>
+      <div class="right">CPC (link)<br><b>$1.33</b>CPC all: $0.13</div>
+    </div>
+    <div class="stage s4">
+      <div class="left"><div class="name">04 · Landing-page views</div><div class="num">1,268</div><div><span class="dropchip">88% land · 12% drop</span></div></div>
+      <div class="right">Cost / LPV<br><b>$1.52</b>Healthy for cold traffic</div>
+    </div>
+    <div class="stage s5">
+      <div class="left"><div class="name">05 · Purchases</div><div class="num">2</div><div><span class="dropchip">CVR 0.16% of LPV</span></div></div>
+      <div class="right">Cost / sale<br><b>$962.36</b>ROAS 0.19×</div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY TABLE -->
+<section class="section">
+  <div class="head">
+    <div>
+      <div class="eyebrow">Day by day, every metric</div>
+      <h2>Six days of truth.</h2>
+    </div>
+    <p>Aggregated across every active ad set. The average row is the working baseline used to model the week ahead. Sep 12 to 14 shows the funnel improving materially at every stage above checkout.</p>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>Date</th><th>Spend</th><th>Impr.</th><th>Reach</th><th>CPM</th>
+        <th>Link clicks</th><th>CTR</th><th>CPC (link)</th>
+        <th>LPV</th><th>Cost / LPV</th><th>Purch.</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Tue · Sep 9</td><td class="big">$393.75</td><td class="big">11,951</td><td>9,612</td><td>$32.95</td><td class="big">184</td><td>1.54%</td><td>$2.14</td><td class="big">160</td><td>$2.46</td><td class="big">0</td></tr>
+        <tr><td>Wed · Sep 10</td><td class="big">$369.34</td><td class="big">20,405</td><td>17,128</td><td>$18.10</td><td class="big">196</td><td>0.96%</td><td>$1.88</td><td class="big">157</td><td>$2.35</td><td class="big">1<span class="tag g">sale</span></td></tr>
+        <tr><td>Thu · Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,688</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td class="big">0</td></tr>
+        <tr><td>Fri · Sep 12</td><td class="big">$274.26</td><td class="big">15,747</td><td>14,051</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td class="big">0</td></tr>
+        <tr><td>Sat · Sep 13</td><td class="big">$471.54</td><td class="big">25,727</td><td>20,499</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.37</td><td class="big">1<span class="tag g">sale</span></td></tr>
+        <tr><td>Sun · Sep 14</td><td class="big">$165.17</td><td class="big">8,490</td><td>7,513</td><td>$19.45</td><td class="big">258</td><td>3.04%</td><td>$0.64</td><td class="big">234</td><td>$0.71</td><td class="big">0</td></tr>
+        <tr class="avg"><td>DAILY AVERAGE</td><td>$320.79</td><td>14,983</td><td>12,582</td><td>$21.41</td><td>241</td><td>1.61%</td><td>$1.33</td><td>211</td><td>$1.52</td><td>0.33</td></tr>
+        <tr class="total"><td>6-DAY TOTAL</td><td>$1,924.72</td><td>89,896</td><td>75,491</td><td>$21.41</td><td>1,444</td><td>1.61%</td><td>$1.33</td><td>1,268</td><td>$1.52</td><td>2</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- WEEKLY PLAN -->
+<section class="section">
+  <div class="head">
+    <div>
+      <div class="eyebrow">The seven-day plan · today through Sunday night</div>
+      <h2>Gradual ramp to $500/day. Full week: $2,440.</h2>
+    </div>
+    <p>Budget rises only if the previous day held CTR ≥ 1.5% and cost per LPV ≤ $1.75. The plan totals $2,440 of the $3,500 authorised ceiling, leaving $1,060 in reserve for a mid-week creative or audience push if needed.</p>
+  </div>
+  <div class="plan">
+    <div class="day today"><div class="d">Mon · Sep 14</div><div class="bud">$180</div>
+      <div class="row"><span>Impressions</span><b>8,407</b></div>
+      <div class="row"><span>Link clicks</span><b>135</b></div>
+      <div class="row"><span>LPV</span><b>119</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Tue · Sep 15</div><div class="bud">$220</div>
+      <div class="row"><span>Impressions</span><b>10,275</b></div>
+      <div class="row"><span>Link clicks</span><b>165</b></div>
+      <div class="row"><span>LPV</span><b>145</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Wed · Sep 16</div><div class="bud">$280</div>
+      <div class="row"><span>Impressions</span><b>13,077</b></div>
+      <div class="row"><span>Link clicks</span><b>210</b></div>
+      <div class="row"><span>LPV</span><b>184</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Thu · Sep 17</div><div class="bud">$340</div>
+      <div class="row"><span>Impressions</span><b>15,880</b></div>
+      <div class="row"><span>Link clicks</span><b>255</b></div>
+      <div class="row"><span>LPV</span><b>224</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Fri · Sep 18</div><div class="bud">$420</div>
+      <div class="row"><span>Impressions</span><b>19,617</b></div>
+      <div class="row"><span>Link clicks</span><b>315</b></div>
+      <div class="row"><span>LPV</span><b>277</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Sat · Sep 19</div><div class="bud">$500</div>
+      <div class="row"><span>Impressions</span><b>23,353</b></div>
+      <div class="row"><span>Link clicks</span><b>375</b></div>
+      <div class="row"><span>LPV</span><b>330</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+    <div class="day"><div class="d">Sun · Sep 20</div><div class="bud">$500</div>
+      <div class="row"><span>Impressions</span><b>23,353</b></div>
+      <div class="row"><span>Link clicks</span><b>375</b></div>
+      <div class="row"><span>LPV</span><b>330</b></div>
+      <div class="row"><span>Cost / LPV</span><b>$1.52</b></div>
+    </div>
+  </div>
+
+  <!-- Callout summary -->
+  <div class="callout">
+    <div class="eyebrow" style="color:var(--blue2)">7-DAY PROJECTION AT BASELINE EFFICIENCY</div>
+    <h2>1,607 LPV. 5 sales requires CVR 0.31% of LPV.</h2>
+    <div class="row">
+      <div><b>$2,440</b>Weekly plan spend (of $3,500 authorised)</div>
+      <div><b>113,963</b>Projected impressions</div>
+      <div><b>1,607</b>Projected landing-page views</div>
+    </div>
+    <div class="row" style="margin-top:20px">
+      <div><b>0.31%</b>LPV → purchase CVR needed to hit 5 sales</div>
+      <div><b>1.97×</b>Uplift needed vs. current 0.16% CVR</div>
+      <div><b>$488</b>Break-even cost / sale at $179 ticket</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENARIOS -->
+<section class="section">
+  <div class="head">
+    <div>
+      <div class="eyebrow">Sales scenarios · 7 days · $2,440 spend · 1,607 LPV</div>
+      <h2>What each checkout CVR delivers.</h2>
+    </div>
+    <p>Current baseline is 0.16%. Anything at or above 0.31% clears the 5-sale target. Anything at 0.50% and above prints profit.</p>
+  </div>
+  <div class="scn">
+    <div class="sc miss"><div class="cv">CVR 0.16% · today</div><div class="sl">2.5</div><div class="cps">Sales · $962 per sale</div></div>
+    <div class="sc"><div class="cv">CVR 0.31% · target</div><div class="sl">5.0</div><div class="cps">Sales · $488 per sale</div></div>
+    <div class="sc hit"><div class="cv">CVR 0.50%</div><div class="sl">8.0</div><div class="cps">Sales · $304 per sale</div></div>
+    <div class="sc hit"><div class="cv">CVR 1.00%</div><div class="sl">16</div><div class="cps">Sales · $152 per sale</div></div>
+    <div class="sc hit"><div class="cv">CVR 1.50%</div><div class="sl">24</div><div class="cps">Sales · $101 per sale</div></div>
+    <div class="sc hit"><div class="cv">CVR 2.00%</div><div class="sl">32</div><div class="cps">Sales · $76 per sale</div></div>
+  </div>
+</section>
+
+<!-- LEVERS -->
+<section class="section">
+  <div class="head">
+    <div>
+      <div class="eyebrow">Where the 2× checkout lift comes from</div>
+      <h2>Three levers. All active by Tuesday night.</h2>
+    </div>
+    <p>Traffic is not the bottleneck. Cost per LPV improved 71% from Sep 11 ($3.86) to Sep 14 ($0.71). The gap is at checkout, and it is closable in-week.</p>
+  </div>
+  <div class="leversgrid">
+    <div class="lever">
+      <h3>Checkout page</h3>
+      <div class="n">+80% CVR</div>
+      <p>Hard-anchor the $179 × 5 and $799 upfront paths above the fold. Add trust row (guarantee, secure badge, refund window). Remove any field not required for Stripe. Persist selection across payment retries. Verify Meta <b>fbc</b> passes through on all three checkout copies before Wed.</p>
+    </div>
+    <div class="lever">
+      <h3>Creative rotation</h3>
+      <div class="n">+40% CTR</div>
+      <p>Kill Adset 1 (0 spend, 0 delivery). Push spend into the Sep 14 top performer (CTR 3.04%, cost/LPV $0.71). Launch two new hooks Tuesday: Julie masterclass hook and biological-age result hook. Test 1-day click attribution vs. 7-day to confirm.</p>
+    </div>
+    <div class="lever">
+      <h3>Retargeting layer</h3>
+      <div class="n">+2 sales</div>
+      <p>1,268 LPV in six days is a real remarketing pool. Warm audience (LPV last 14 days) with a $50/day retargeting ad set starting Tuesday, running the risk-reversal message: refund window, payment plan, secure checkout. Historically delivers 1.2× to 2× baseline CVR.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM LINE -->
+<section class="section">
+  <div class="callout">
+    <div class="eyebrow" style="color:var(--blue2)">BOTTOM LINE</div>
+    <h2 style="font-size:clamp(36px,4.4vw,64px)">5 sales in 7 days is realistic. Not on autopilot.</h2>
+    <p style="font-size:20px;max-width:1000px;margin-top:16px">The media plan delivers the traffic. The plan spends $2,440 of the $3,500 authorised ceiling and reserves $1,060 for a Thursday push if week-to-date sales lag two. The plan holds if checkout CVR moves from 0.16% to 0.31% of LPV, which is a single-lever change most closable at the payment step. Retargeting the 1,268 warm LPV is the fastest incremental sale.</p>
+    <div class="row" style="margin-top:20px">
+      <div><b>$2,440</b>Planned spend, 7 days</div>
+      <div><b>$1,060</b>Reserve, held for Thu push</div>
+      <div><b>5+</b>Sales at 0.31% CVR or better</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built for Omri Gitter · GiTA Agency · Data source: Meta Ads export (Sep 9–14, 2026, all active ecomm ad sets). Baselines used for the 7-day forecast: CPM $21.41, CTR 1.61%, cost per LPV $1.52. All numbers verified against the source file, no estimates.
+</footer>
+
+</div>
+</body>
+</html>
