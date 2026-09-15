@@ -71,17 +71,17 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:900px;margin-bottom:24p
 .stg .right .rsub{font-size:16px;color:#6A7079;margin-top:10px}
 .stg .drop{font-family:'Inter Tight';font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-top:20px;display:block}
 
-.daily-tbl{margin-top:40px;background:transparent}
-.daily-tbl table{width:100%;border-collapse:collapse}
-.daily-tbl th,.daily-tbl td{text-align:right;padding:26px 20px;font-family:'Inter Tight';font-weight:500;font-size:20px;color:var(--ink);border-bottom:1px solid rgba(14,17,22,.10)}
-.daily-tbl th{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#6A7079;font-weight:600;padding-bottom:20px}
-.daily-tbl th:first-child,.daily-tbl td:first-child{text-align:left;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:26px}
-.daily-tbl td.big{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--ink)}
+.daily-tbl{margin-top:40px;background:transparent;overflow-x:auto}
+.daily-tbl table{width:100%;border-collapse:collapse;min-width:2000px}
+.daily-tbl th,.daily-tbl td{text-align:right;padding:34px 24px;font-family:'Inter Tight';font-weight:600;font-size:32px;color:var(--ink);border-bottom:1px solid rgba(14,17,22,.10)}
+.daily-tbl th{font-size:20px;letter-spacing:.20em;text-transform:uppercase;color:#4A5058;font-weight:700;padding-bottom:28px}
+.daily-tbl th:first-child,.daily-tbl td:first-child{text-align:left;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px}
+.daily-tbl td.big{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:52px;color:var(--ink)}
 .daily-tbl tr.today td{background:rgba(184,137,74,.10)}
-.daily-tbl tr.avg td{background:transparent;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding-top:32px;padding-bottom:32px;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--sea)}
-.daily-tbl tr.avg td:first-child{font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-family:'Inter Tight';font-weight:600;font-style:normal}
-.daily-tbl tr.tot td{background:transparent;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--gold);padding-top:32px}
-.daily-tbl tr.tot td:first-child{font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-family:'Inter Tight';font-weight:600;font-style:normal}
+.daily-tbl tr.avg td{background:transparent;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding-top:42px;padding-bottom:42px;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:48px;color:var(--sea)}
+.daily-tbl tr.avg td:first-child{font-size:34px;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-family:'Inter Tight';font-weight:700;font-style:normal}
+.daily-tbl tr.tot td{background:transparent;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:48px;color:var(--gold);padding-top:42px}
+.daily-tbl tr.tot td:first-child{font-size:34px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-family:'Inter Tight';font-weight:700;font-style:normal}
 .daily-tbl .pill{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--sage);padding:4px 10px;border-radius:4px;margin-left:8px}
 .daily-tbl .live{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin-left:8px}
 
@@ -94,45 +94,45 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:900px;margin-bottom:24p
 
 /* 7-day grid: metric rows, day columns */
 .dgrid{margin-top:80px;overflow-x:auto}
-.dgrid table{width:100%;border-collapse:collapse;min-width:1240px}
-.dgrid th,.dgrid td{padding:26px 18px;text-align:center;border-bottom:1px solid rgba(246,241,231,.14);vertical-align:middle}
-.dgrid thead th{border-bottom:2px solid rgba(246,241,231,.35);padding-bottom:32px}
-.dgrid th.metric-h,.dgrid td.metric-h{text-align:left;font-family:'Inter Tight';font-weight:700;font-size:15px;letter-spacing:.20em;text-transform:uppercase;color:rgba(246,241,231,.85);width:200px;padding-left:0}
-.dgrid th.day{font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.60);padding-bottom:6px}
-.dgrid th.day .dd{display:block;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px;color:#F6F1E7;letter-spacing:-.02em;margin-top:8px;line-height:1}
+.dgrid table{width:100%;border-collapse:collapse;min-width:1800px}
+.dgrid th,.dgrid td{padding:40px 26px;text-align:center;border-bottom:1px solid rgba(246,241,231,.14);vertical-align:middle}
+.dgrid thead th{border-bottom:2px solid rgba(246,241,231,.35);padding-bottom:44px}
+.dgrid th.metric-h,.dgrid td.metric-h{text-align:left;font-family:'Inter Tight';font-weight:700;font-size:26px;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,231,.95);width:340px;padding-left:0}
+.dgrid th.day{font-family:'Inter Tight';font-weight:700;font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,231,.75);padding-bottom:10px}
+.dgrid th.day .dd{display:block;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:88px;color:#F6F1E7;letter-spacing:-.02em;margin-top:12px;line-height:1}
 .dgrid th.day.today{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
 .dgrid th.day.today .dd{color:#E9C88A}
-.dgrid th.day.today::after{content:'LIVE';display:block;font-family:'Inter Tight';font-weight:700;font-size:10px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin:10px auto 0;width:fit-content}
-.dgrid td.day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:36px;color:#F6F1E7;line-height:1}
+.dgrid th.day.today::after{content:'LIVE';display:block;font-family:'Inter Tight';font-weight:700;font-size:18px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:6px 14px;border-radius:4px;margin:14px auto 0;width:fit-content}
+.dgrid td.day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:72px;color:#F6F1E7;line-height:1}
 .dgrid td.day.today{background:rgba(233,200,138,.08);color:#E9C88A}
-.dgrid td.day .sub{display:block;font-family:'Inter Tight';font-style:normal;font-weight:500;font-size:11px;letter-spacing:.14em;color:rgba(246,241,231,.55);margin-top:6px;text-transform:uppercase}
+.dgrid td.day .sub{display:block;font-family:'Inter Tight';font-style:normal;font-weight:600;font-size:16px;letter-spacing:.14em;color:rgba(246,241,231,.65);margin-top:10px;text-transform:uppercase}
 .dgrid td.day.best{color:#A8E4C6}
 .dgrid td.day.worst{color:#F1B3B3}
 .dgrid tr:last-child td{border-bottom:0}
 
 /* Final summary: yesterday vs today vs 7-day avg — 3 fat cards */
-.compare3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:100px}
-.c3-card{background:rgba(255,255,255,.04);border:1px solid rgba(246,241,231,.20);border-radius:10px;padding:48px 40px}
+.compare3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:120px}
+.c3-card{background:rgba(255,255,255,.04);border:1px solid rgba(246,241,231,.20);border-radius:12px;padding:64px 52px}
 .c3-card.today{background:rgba(233,200,138,.12);border-color:rgba(233,200,138,.60)}
 .c3-card.avg{background:rgba(255,255,255,.02);border-style:dashed}
-.c3-card .c3-hd{font-family:'Inter Tight';font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(246,241,231,.60);margin-bottom:10px}
+.c3-card .c3-hd{font-family:'Inter Tight';font-weight:700;font-size:22px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.75);margin-bottom:18px}
 .c3-card.today .c3-hd{color:#E9C88A}
-.c3-card .c3-day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:52px;color:#F6F1E7;letter-spacing:-.02em;margin-bottom:36px;line-height:1}
+.c3-card .c3-day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:112px;color:#F6F1E7;letter-spacing:-.02em;margin-bottom:48px;line-height:1}
 .c3-card.today .c3-day{color:#E9C88A}
-.c3-card .c3-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid rgba(246,241,231,.10);align-items:baseline}
+.c3-card .c3-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:22px 0;border-bottom:1px solid rgba(246,241,231,.10);align-items:baseline}
 .c3-card .c3-row:last-child{border-bottom:0}
-.c3-card .c3-rn{font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.20em;text-transform:uppercase;color:rgba(246,241,231,.65)}
-.c3-card .c3-rv{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:30px;color:#F6F1E7;line-height:1;text-align:right}
+.c3-card .c3-rn{font-family:'Inter Tight';font-weight:700;font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.85)}
+.c3-card .c3-rv{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:60px;color:#F6F1E7;line-height:1;text-align:right}
 .c3-card.today .c3-rv{color:#E9C88A}
 
-.compare-note{font-size:15px;color:rgba(246,241,231,.60);margin-top:20px;letter-spacing:.02em}
+.compare-note{font-size:22px;color:rgba(246,241,231,.70);margin-top:28px;letter-spacing:.02em}
 
-.pace-headline{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:80px;padding-top:60px;border-top:1px solid rgba(246,241,231,.20)}
-.ph .p-lbl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:16px}
-.ph .p-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:80px;line-height:.95;letter-spacing:-.02em;color:#F6F1E7}
+.pace-headline{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:100px;padding-top:80px;border-top:1px solid rgba(246,241,231,.20)}
+.ph .p-lbl{font-family:'Inter Tight';font-weight:700;font-size:22px;letter-spacing:.22em;text-transform:uppercase;color:#E9C88A;margin-bottom:24px}
+.ph .p-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:180px;line-height:.9;letter-spacing:-.02em;color:#F6F1E7}
 .ph.warn .p-val{color:#F1B3B3}
 .ph.good .p-val{color:#A8E4C6}
-.ph .p-sub{font-size:15px;color:rgba(246,241,231,.75);margin-top:12px}
+.ph .p-sub{font-size:22px;color:rgba(246,241,231,.85);margin-top:20px;line-height:1.4}
 
 footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font-size:14px;letter-spacing:.02em;text-align:center}
 
