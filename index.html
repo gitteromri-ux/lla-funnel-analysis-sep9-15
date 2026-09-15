@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>LLA · Ecommerce Funnel · Sep 9 to Sep 15, 2026</title>
+<title>LLA · Ecommerce Funnel · Sep 3 to Sep 15, 2026 · full days</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400;1,500;1,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -147,357 +147,969 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
   .pace-headline{grid-template-columns:1fr;gap:32px}
   footer{padding:60px 24px}
 }
+
+.gsub{font-family:'Inter Tight';font-weight:700;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin:80px 0 24px}
+.dgrid th.day.final{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
+.dgrid th.day.final .dd{color:#E9C88A}
+.dgrid th.day.final::after{content:'FINAL';display:block;font-family:'Inter Tight';font-weight:700;font-size:18px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:6px 14px;border-radius:4px;margin:14px auto 0;width:fit-content}
+.dgrid td.day.final{background:rgba(233,200,138,.08)}
+.dgrid th.day.today::after{content:none}
+.daily-tbl tr.final td{background:rgba(184,137,74,.10)}
+.s-age{background:var(--ink);color:var(--cream)}
+.s-age .label{color:#E9C88A}
+.s-age h2{color:#F6F1E7}
+.s-age p.agesub{color:rgba(246,241,231,.78);font-size:24px;max-width:1000px;margin-bottom:64px}
+.agegrid{margin-top:20px}
+.agehead{display:grid;grid-template-columns:150px 1fr 260px 320px;gap:32px;font-family:'Inter Tight';font-weight:700;font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.55);padding-bottom:18px;border-bottom:1px solid rgba(246,241,231,.18)}
+.arow{display:grid;grid-template-columns:150px 1fr 260px 320px;gap:32px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(246,241,231,.10)}
+.arow:last-child{border-bottom:0}
+.aband{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:48px;color:#F6F1E7;line-height:1}
+.abar{height:34px;background:rgba(246,241,231,.08);border-radius:4px;overflow:hidden}
+.afill{height:100%;background:linear-gradient(90deg,#B8894A,#E9C88A);border-radius:4px;min-width:2px}
+.arow.top .afill{background:linear-gradient(90deg,#4FB58A,#A8E4C6)}
+.anum{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:64px;color:#F6F1E7;line-height:1;text-align:right;white-space:nowrap}
+.anum .ash{display:inline-block;font-family:'Inter Tight';font-style:normal;font-weight:700;font-size:20px;color:#E9C88A;margin-left:16px;letter-spacing:.06em;vertical-align:middle}
+.ameta{font-family:'Inter Tight';font-weight:600;font-size:19px;color:rgba(246,241,231,.75);line-height:1.5;text-align:right}
+.apill{display:inline-block;font-family:'Inter Tight';font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:#A8E4C6;padding:5px 12px;border-radius:4px;margin-top:8px}
+.agefoot{font-size:18px;color:rgba(246,241,231,.55);margin-top:48px;letter-spacing:.02em}
+.s-age.first{background:#1A1420}
+.s-age.first .agehead,.s-age.first .arow{border-color:rgba(246,241,231,.14)}
+.s-actions{background:var(--wine);color:var(--cream)}
+.s-actions .label{color:#F1DED7}
+.s-actions h2{color:#F6F1E7}
+.s-actions p{color:rgba(246,241,231,.85)}
+.act{display:grid;grid-template-columns:90px 1fr;gap:48px;padding:56px 0;border-bottom:1px solid rgba(246,241,231,.18);align-items:start}
+.act:last-child{border-bottom:0}
+.act .n{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:96px;line-height:.9;color:#E9C88A}
+.act h3{color:#F6F1E7;font-size:44px;margin-bottom:18px}
+.act p{font-size:23px;max-width:1000px}
+.act .why{font-family:'Inter Tight';font-weight:600;font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:#E9C88A;margin-top:10px}
+@media (max-width:1100px){
+  .agehead{display:none}
+  .arow{grid-template-columns:1fr;gap:12px}
+  .anum,.ameta{text-align:left}
+  .act{grid-template-columns:1fr;gap:16px}
+}
+
+/* fit-to-width overrides */
+.s-compare .wrap{max-width:1500px;padding-left:60px;padding-right:60px}
+.dgrid{overflow:visible}
+.dgrid table{min-width:0;table-layout:fixed}
+.dgrid th,.dgrid td{padding:26px 8px}
+.dgrid th.metric-h,.dgrid td.metric-h{width:200px;font-size:16px;letter-spacing:.12em}
+.dgrid th.day{font-size:15px;letter-spacing:.16em}
+.dgrid th.day .dd{font-size:44px}
+.dgrid td.day{font-size:38px}
+.dgrid th.day.final::after,.dgrid th.day.today::after{font-size:13px;padding:4px 10px;letter-spacing:.2em}
+.compare3{gap:24px}
+.c3-card{padding:40px 32px;min-width:0}
+.c3-card .c3-hd{font-size:15px;letter-spacing:.18em}
+.c3-card .c3-day{font-size:64px;margin-bottom:28px}
+.c3-card .c3-row{padding:14px 0;gap:12px}
+.c3-card .c3-rn{font-size:14px;letter-spacing:.12em}
+.c3-card .c3-rv{font-size:36px}
+.pace-headline{gap:40px}
+.ph .p-val{font-size:120px}
+.ph .p-lbl{font-size:16px}
+.ph .p-sub{font-size:19px}
+
+.gsub{font-family:'Inter Tight';font-weight:700;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin:80px 0 24px}
+.dgrid th.day.final{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
+.dgrid th.day.final .dd{color:#E9C88A}
+.dgrid th.day.final::after{content:'FINAL';display:block;font-family:'Inter Tight';font-weight:700;font-size:18px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:6px 14px;border-radius:4px;margin:14px auto 0;width:fit-content}
+.dgrid td.day.final{background:rgba(233,200,138,.08)}
+.dgrid th.day.today::after{content:none}
+.daily-tbl tr.final td{background:rgba(184,137,74,.10)}
+.s-age{background:var(--ink);color:var(--cream)}
+.s-age .label{color:#E9C88A}
+.s-age h2{color:#F6F1E7}
+.s-age p.agesub{color:rgba(246,241,231,.78);font-size:24px;max-width:1000px;margin-bottom:64px}
+.agegrid{margin-top:20px}
+.agehead{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;font-family:'Inter Tight';font-weight:700;font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.55);padding-bottom:18px;border-bottom:1px solid rgba(246,241,231,.18)}
+.arow{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(246,241,231,.10)}
+.arow:last-child{border-bottom:0}
+.aband{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px;white-space:nowrap;color:#F6F1E7;line-height:1}
+.abar{height:34px;background:rgba(246,241,231,.08);border-radius:4px;overflow:hidden}
+.afill{height:100%;background:linear-gradient(90deg,#B8894A,#E9C88A);border-radius:4px;min-width:2px}
+.arow.top .afill{background:linear-gradient(90deg,#4FB58A,#A8E4C6)}
+.anum{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:64px;color:#F6F1E7;line-height:1;text-align:right;white-space:nowrap}
+.anum .ash{display:inline-block;font-family:'Inter Tight';font-style:normal;font-weight:700;font-size:20px;color:#E9C88A;margin-left:16px;letter-spacing:.06em;vertical-align:middle}
+.ameta{font-family:'Inter Tight';font-weight:600;font-size:19px;color:rgba(246,241,231,.75);line-height:1.5;text-align:right}
+.apill{display:block;width:fit-content;margin-left:auto;font-family:'Inter Tight';font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:#A8E4C6;padding:5px 12px;border-radius:4px;margin-top:8px}
+.agefoot{font-size:18px;color:rgba(246,241,231,.55);margin-top:48px;letter-spacing:.02em}
+.s-age.first{background:#1A1420}
+.s-age.first .agehead,.s-age.first .arow{border-color:rgba(246,241,231,.14)}
+.s-actions{background:var(--wine);color:var(--cream)}
+.s-actions .label{color:#F1DED7}
+.s-actions h2{color:#F6F1E7}
+.s-actions p{color:rgba(246,241,231,.85)}
+.act{display:grid;grid-template-columns:90px 1fr;gap:48px;padding:56px 0;border-bottom:1px solid rgba(246,241,231,.18);align-items:start}
+.act:last-child{border-bottom:0}
+.act .n{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:96px;line-height:.9;color:#E9C88A}
+.act h3{color:#F6F1E7;font-size:44px;margin-bottom:18px}
+.act p{font-size:23px;max-width:1000px}
+.act .why{font-family:'Inter Tight';font-weight:600;font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:#E9C88A;margin-top:10px}
+@media (max-width:1100px){
+  .agehead{display:none}
+  .arow{grid-template-columns:1fr;gap:12px}
+  .anum,.ameta{text-align:left}
+  .act{grid-template-columns:1fr;gap:16px}
+}
+
+/* fit-to-width overrides */
+.s-daily .wrap{max-width:1500px;padding-left:60px;padding-right:60px}
+.daily-tbl{overflow:visible}
+.daily-tbl table{min-width:0;table-layout:fixed}
+.daily-tbl th,.daily-tbl td{padding:22px 8px;font-size:21px}
+.daily-tbl th{font-size:13px;letter-spacing:.12em}
+.daily-tbl th:first-child,.daily-tbl td:first-child{font-size:26px;white-space:nowrap;width:170px}
+.daily-tbl td.big{font-size:30px}
+.daily-tbl .pill,.daily-tbl .live{display:block;width:fit-content;margin:6px 0 0 auto}
+
+.s-compare .wrap{max-width:1500px;padding-left:60px;padding-right:60px}
+.dgrid{overflow:visible}
+.dgrid table{min-width:0;table-layout:fixed}
+.dgrid th,.dgrid td{padding:26px 8px}
+.dgrid th.metric-h,.dgrid td.metric-h{width:200px;font-size:16px;letter-spacing:.12em}
+.dgrid th.day{font-size:15px;letter-spacing:.16em}
+.dgrid th.day .dd{font-size:44px}
+.dgrid td.day{font-size:38px}
+.dgrid th.day.final::after,.dgrid th.day.today::after{font-size:13px;padding:4px 10px;letter-spacing:.2em}
+.compare3{gap:24px}
+.c3-card{padding:40px 32px;min-width:0}
+.c3-card .c3-hd{font-size:15px;letter-spacing:.18em}
+.c3-card .c3-day{font-size:64px;margin-bottom:28px}
+.c3-card .c3-row{padding:14px 0;gap:12px}
+.c3-card .c3-rn{font-size:14px;letter-spacing:.12em}
+.c3-card .c3-rv{font-size:36px}
+.pace-headline{gap:40px}
+.ph .p-val{font-size:120px}
+.ph .p-lbl{font-size:16px}
+.ph .p-sub{font-size:19px}
+
+.gsub{font-family:'Inter Tight';font-weight:700;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin:80px 0 24px}
+.dgrid th.day.final{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
+.dgrid th.day.final .dd{color:#E9C88A}
+.dgrid th.day.final::after{content:'FINAL';display:block;font-family:'Inter Tight';font-weight:700;font-size:18px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:6px 14px;border-radius:4px;margin:14px auto 0;width:fit-content}
+.dgrid td.day.final{background:rgba(233,200,138,.08)}
+.dgrid th.day.today::after{content:none}
+.daily-tbl tr.final td{background:rgba(184,137,74,.10)}
+.s-age{background:var(--ink);color:var(--cream)}
+.s-age .label{color:#E9C88A}
+.s-age h2{color:#F6F1E7}
+.s-age p.agesub{color:rgba(246,241,231,.78);font-size:24px;max-width:1000px;margin-bottom:64px}
+.agegrid{margin-top:20px}
+.agehead{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;font-family:'Inter Tight';font-weight:700;font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.55);padding-bottom:18px;border-bottom:1px solid rgba(246,241,231,.18)}
+.arow{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(246,241,231,.10)}
+.arow:last-child{border-bottom:0}
+.aband{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px;white-space:nowrap;color:#F6F1E7;line-height:1}
+.abar{height:34px;background:rgba(246,241,231,.08);border-radius:4px;overflow:hidden}
+.afill{height:100%;background:linear-gradient(90deg,#B8894A,#E9C88A);border-radius:4px;min-width:2px}
+.arow.top .afill{background:linear-gradient(90deg,#4FB58A,#A8E4C6)}
+.anum{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:64px;color:#F6F1E7;line-height:1;text-align:right;white-space:nowrap}
+.anum .ash{display:inline-block;font-family:'Inter Tight';font-style:normal;font-weight:700;font-size:20px;color:#E9C88A;margin-left:16px;letter-spacing:.06em;vertical-align:middle}
+.ameta{font-family:'Inter Tight';font-weight:600;font-size:19px;color:rgba(246,241,231,.75);line-height:1.5;text-align:right}
+.apill{display:block;width:fit-content;margin-left:auto;font-family:'Inter Tight';font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:#A8E4C6;padding:5px 12px;border-radius:4px;margin-top:8px}
+.agefoot{font-size:18px;color:rgba(246,241,231,.55);margin-top:48px;letter-spacing:.02em}
+.s-age.first{background:#1A1420}
+.s-age.first .agehead,.s-age.first .arow{border-color:rgba(246,241,231,.14)}
+.s-actions{background:var(--wine);color:var(--cream)}
+.s-actions .label{color:#F1DED7}
+.s-actions h2{color:#F6F1E7}
+.s-actions p{color:rgba(246,241,231,.85)}
+.act{display:grid;grid-template-columns:90px 1fr;gap:48px;padding:56px 0;border-bottom:1px solid rgba(246,241,231,.18);align-items:start}
+.act:last-child{border-bottom:0}
+.act .n{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:96px;line-height:.9;color:#E9C88A}
+.act h3{color:#F6F1E7;font-size:44px;margin-bottom:18px}
+.act p{font-size:23px;max-width:1000px}
+.act .why{font-family:'Inter Tight';font-weight:600;font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:#E9C88A;margin-top:10px}
+@media (max-width:1100px){
+  .agehead{display:none}
+  .arow{grid-template-columns:1fr;gap:12px}
+  .anum,.ameta{text-align:left}
+  .act{grid-template-columns:1fr;gap:16px}
+}
+
+/* fit-to-width overrides */
+.s-daily .wrap{max-width:1500px;padding-left:60px;padding-right:60px}
+.daily-tbl{overflow:visible}
+.daily-tbl table{min-width:0;table-layout:fixed}
+.daily-tbl th,.daily-tbl td{padding:22px 8px;font-size:21px}
+.daily-tbl th{font-size:13px;letter-spacing:.12em}
+.daily-tbl th:first-child,.daily-tbl td:first-child{font-size:26px;white-space:nowrap;width:170px}
+.daily-tbl td.big{font-size:30px}
+.daily-tbl tr.avg td,.daily-tbl tr.tot td{font-size:28px;padding-top:26px;padding-bottom:26px}
+.daily-tbl tr.avg td:first-child,.daily-tbl tr.tot td:first-child{font-size:14px;letter-spacing:.12em}
+.daily-tbl .pill,.daily-tbl .live{display:block;width:fit-content;margin:6px 0 0 auto}
+
+.s-compare .wrap{max-width:1500px;padding-left:60px;padding-right:60px}
+.dgrid{overflow:visible}
+.dgrid table{min-width:0;table-layout:fixed}
+.dgrid th,.dgrid td{padding:26px 8px}
+.dgrid th.metric-h,.dgrid td.metric-h{width:200px;font-size:16px;letter-spacing:.12em}
+.dgrid th.day{font-size:15px;letter-spacing:.16em}
+.dgrid th.day .dd{font-size:44px}
+.dgrid td.day{font-size:38px}
+.dgrid th.day.final::after,.dgrid th.day.today::after{font-size:13px;padding:4px 10px;letter-spacing:.2em}
+.compare3{gap:24px}
+.c3-card{padding:40px 32px;min-width:0}
+.c3-card .c3-hd{font-size:15px;letter-spacing:.18em}
+.c3-card .c3-day{font-size:64px;margin-bottom:28px}
+.c3-card .c3-row{padding:14px 0;gap:12px}
+.c3-card .c3-rn{font-size:14px;letter-spacing:.12em}
+.c3-card .c3-rv{font-size:36px}
+.pace-headline{gap:40px}
+.ph .p-val{font-size:120px}
+.ph .p-lbl{font-size:16px}
+.ph .p-sub{font-size:19px}
+
+.gsub{font-family:'Inter Tight';font-weight:700;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin:80px 0 24px}
+.dgrid th.day.final{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
+.dgrid th.day.final .dd{color:#E9C88A}
+.dgrid th.day.final::after{content:'FINAL';display:block;font-family:'Inter Tight';font-weight:700;font-size:18px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:6px 14px;border-radius:4px;margin:14px auto 0;width:fit-content}
+.dgrid td.day.final{background:rgba(233,200,138,.08)}
+.dgrid th.day.today::after{content:none}
+.daily-tbl tr.final td{background:rgba(184,137,74,.10)}
+.s-age{background:var(--ink);color:var(--cream)}
+.s-age .label{color:#E9C88A}
+.s-age h2{color:#F6F1E7}
+.s-age p.agesub{color:rgba(246,241,231,.78);font-size:24px;max-width:1000px;margin-bottom:64px}
+.agegrid{margin-top:20px}
+.agehead{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;font-family:'Inter Tight';font-weight:700;font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.55);padding-bottom:18px;border-bottom:1px solid rgba(246,241,231,.18)}
+.arow{display:grid;grid-template-columns:210px 1fr 260px 320px;gap:32px;align-items:center;padding:26px 0;border-bottom:1px solid rgba(246,241,231,.10)}
+.arow:last-child{border-bottom:0}
+.aband{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px;white-space:nowrap;color:#F6F1E7;line-height:1}
+.abar{height:34px;background:rgba(246,241,231,.08);border-radius:4px;overflow:hidden}
+.afill{height:100%;background:linear-gradient(90deg,#B8894A,#E9C88A);border-radius:4px;min-width:2px}
+.arow.top .afill{background:linear-gradient(90deg,#4FB58A,#A8E4C6)}
+.anum{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:64px;color:#F6F1E7;line-height:1;text-align:right;white-space:nowrap}
+.anum .ash{display:inline-block;font-family:'Inter Tight';font-style:normal;font-weight:700;font-size:20px;color:#E9C88A;margin-left:16px;letter-spacing:.06em;vertical-align:middle}
+.ameta{font-family:'Inter Tight';font-weight:600;font-size:19px;color:rgba(246,241,231,.75);line-height:1.5;text-align:right}
+.apill{display:block;width:fit-content;margin-left:auto;font-family:'Inter Tight';font-weight:700;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:#A8E4C6;padding:5px 12px;border-radius:4px;margin-top:8px}
+.agefoot{font-size:18px;color:rgba(246,241,231,.55);margin-top:48px;letter-spacing:.02em}
+.s-age.first{background:#1A1420}
+.s-age.first .agehead,.s-age.first .arow{border-color:rgba(246,241,231,.14)}
+.s-actions{background:var(--wine);color:var(--cream)}
+.s-actions .label{color:#F1DED7}
+.s-actions h2{color:#F6F1E7}
+.s-actions p{color:rgba(246,241,231,.85)}
+.act{display:grid;grid-template-columns:90px 1fr;gap:48px;padding:56px 0;border-bottom:1px solid rgba(246,241,231,.18);align-items:start}
+.act:last-child{border-bottom:0}
+.act .n{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:96px;line-height:.9;color:#E9C88A}
+.act h3{color:#F6F1E7;font-size:44px;margin-bottom:18px}
+.act p{font-size:23px;max-width:1000px}
+.act .why{font-family:'Inter Tight';font-weight:600;font-size:17px;letter-spacing:.14em;text-transform:uppercase;color:#E9C88A;margin-top:10px}
+@media (max-width:1100px){
+  .agehead{display:none}
+  .arow{grid-template-columns:1fr;gap:12px}
+  .anum,.ameta{text-align:left}
+  .act{grid-template-columns:1fr;gap:16px}
+}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="label">Longevity Life Academy · Meta ecommerce funnel · Sep 9 to Sep 15, 2026</div>
-    <h1>Seven days<br/>of the <span class="serif italic">funnel,</span><br/>day by day.</h1>
-    <p class="lede">Seven days of live delivery on the ecommerce campaign (LGV_EN_PPC_ecomm-01_2026-09-02_#118148). Every metric aggregated across every active ecommerce ad set, day by day. Sep 14 includes the two-adset consolidation into ecomm Adset 2. Sep 15 is today, still delivering.</p>
+    <div class="label">Longevity Life Academy · Meta ecommerce funnel · Sep 3 to Sep 15, 2026 · 13 full days</div>
+    <h1>Thirteen days<br/>of the <span class="serif italic">funnel,</span><br/>day by day.</h1>
+    <p class="lede">Every day of delivery on the ecommerce campaign (LGV_EN_PPC_ecomm-01_2026-09-02_#118148) from first spend on Sep 3 through the end of Sep 15. Every metric is aggregated across every ecommerce ad set that delivered that day. Sep 14 is the consolidation of Adset 3 into Adset 2. Sep 15 is a complete, final day: the account runs on Israel time and the data was pulled at 02:40 IDT on Sep 16.</p>
 
     <div class="kpi-row">
-      <div class="kpi a">
-        <div class="k-lbl">Spend, 7 days</div>
-        <div class="k-val">$2,422</div>
-        <div class="k-sub">$345.99 average per day</div>
-      </div>
-      <div class="kpi b">
-        <div class="k-lbl">Landing-page views</div>
-        <div class="k-val">1,886</div>
-        <div class="k-sub">89% of link clicks land</div>
-      </div>
-      <div class="kpi c">
-        <div class="k-lbl">Purchases</div>
-        <div class="k-val">2</div>
-        <div class="k-sub">$358 revenue at $179</div>
-      </div>
-      <div class="kpi d">
-        <div class="k-lbl">Cost per purchase</div>
-        <div class="k-val">$1,211</div>
-        <div class="k-sub">Break-even at $179 ticket: $179</div>
-      </div>
+      <div class="kpi a"><div class="k-lbl">Spend, 13 days</div><div class="k-val">$4,751</div><div class="k-sub">$365.44 average per day</div></div>
+      <div class="kpi b"><div class="k-lbl">Landing-page views</div><div class="k-val">2,341</div><div class="k-sub">86% of link clicks land</div></div>
+      <div class="kpi c"><div class="k-lbl">Purchases</div><div class="k-val">2</div><div class="k-sub">$358 revenue at $179</div></div>
+      <div class="kpi d"><div class="k-lbl">Cost per purchase</div><div class="k-val">$2,375</div><div class="k-sub">Break-even at $179 ticket: $179</div></div>
     </div>
   </div>
 </section>
 
-<!-- FUNNEL PYRAMID -->
 <section class="s-funnel">
   <div class="wrap">
-    <div class="label">The funnel, drawn to scale · 7-day totals</div>
+    <div class="label">The funnel, drawn to scale · 13-day totals</div>
     <h2>Every stage.<br/>Every drop-off.<br/><span style="color:var(--wine)">Every dollar.</span></h2>
     <p>Five stages, top to bottom. The number on the left is the raw count. The number on the right is the unit economics for that step.</p>
-
     <div class="pyramid">
-      <div class="stg a">
-        <div class="roman">i</div>
-        <div class="body">
-          <div>
-            <div class="name">Reach · unique-per-day, summed</div>
-            <div class="num">94,338</div>
-            <span class="drop">Frequency 1.20× (impressions / reach)</span>
-          </div>
-          <div class="right">
-            <div class="rlbl">Spend, 7 days</div>
-            <div class="rnum">$2,421.94</div>
-            <div class="rsub">$345.99 average per day</div>
-          </div>
-        </div>
-      </div>
-      <div class="stg b">
-        <div class="roman">ii</div>
-        <div class="body">
-          <div>
-            <div class="name">Impressions</div>
-            <div class="num">113,535</div>
-            <span class="drop">Total ad views served</span>
-          </div>
-          <div class="right">
-            <div class="rlbl">CPM · cost per 1,000</div>
-            <div class="rnum">$21.33</div>
-            <div class="rsub">Cold US traffic</div>
-          </div>
-        </div>
-      </div>
-      <div class="stg c">
-        <div class="roman">iii</div>
-        <div class="body">
-          <div>
-            <div class="name">Link clicks</div>
-            <div class="num">2,117</div>
-            <span class="drop">Link CTR 1.87%</span>
-          </div>
-          <div class="right">
-            <div class="rlbl">CPC · link click</div>
-            <div class="rnum">$1.14</div>
-            <div class="rsub">CPC all clicks $0.13</div>
-          </div>
-        </div>
-      </div>
-      <div class="stg d">
-        <div class="roman">iv</div>
-        <div class="body">
-          <div>
-            <div class="name">Landing-page views</div>
-            <div class="num">1,886</div>
-            <span class="drop">89% of link clicks land · 11% drop</span>
-          </div>
-          <div class="right">
-            <div class="rlbl">Cost per LPV</div>
-            <div class="rnum">$1.28</div>
-            <div class="rsub">Fell 67% from Sep 11 peak</div>
-          </div>
-        </div>
-      </div>
-      <div class="stg e">
-        <div class="roman">v</div>
-        <div class="body">
-          <div>
-            <div class="name">Purchases</div>
-            <div class="num">2</div>
-            <span class="drop">CVR 0.11% of LPV</span>
-          </div>
-          <div class="right">
-            <div class="rlbl">Cost per sale</div>
-            <div class="rnum">$1,210.97</div>
-            <div class="rsub">ROAS 0.15×</div>
-          </div>
-        </div>
-      </div>
+      <div class="stg a"><div class="roman">i</div><div class="body"><div><div class="name">Reach · unique-per-day, summed</div><div class="num">127,308</div><span class="drop">Frequency 1.37× (impressions / reach)</span></div><div class="right"><div class="rlbl">Spend, 13 days</div><div class="rnum">$4,750.66</div><div class="rsub">$365.44 average per day</div></div></div></div>
+      <div class="stg b"><div class="roman">ii</div><div class="body"><div><div class="name">Impressions</div><div class="num">174,726</div><span class="drop">Total ad views served</span></div><div class="right"><div class="rlbl">CPM · cost per 1,000</div><div class="rnum">$27.19</div><div class="rsub">Cold US traffic</div></div></div></div>
+      <div class="stg c"><div class="roman">iii</div><div class="body"><div><div class="name">Link clicks</div><div class="num">2,719</div><span class="drop">Link CTR 1.56%</span></div><div class="right"><div class="rlbl">CPC · link click</div><div class="rnum">$1.75</div><div class="rsub">Sep 15: $1.21</div></div></div></div>
+      <div class="stg d"><div class="roman">iv</div><div class="body"><div><div class="name">Landing-page views</div><div class="num">2,341</div><span class="drop">86% of link clicks land · 14% drop</span></div><div class="right"><div class="rlbl">Cost per LPV</div><div class="rnum">$2.03</div><div class="rsub">Sep 15: $1.33 · Sep 3: $6.12</div></div></div></div>
+      <div class="stg e"><div class="roman">v</div><div class="body"><div><div class="name">Purchases</div><div class="num">2</div><span class="drop">CVR 0.085% of LPV · one sale per 1,170 views</span></div><div class="right"><div class="rlbl">Cost per sale</div><div class="rnum">$2,375.33</div><div class="rsub">ROAS 0.08×</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- DAILY -->
 <section class="s-daily">
   <div class="wrap">
-    <div class="label">Day by day · every metric · Sep 9 to Sep 15</div>
-    <h2>Seven days<br/>of <span style="color:var(--wine)">truth.</span></h2>
-    <p>Aggregated across every active ecommerce ad set. Sep 14 is the day the two adsets consolidated into ecomm Adset 2. Sep 15 is today, still live.</p>
-
-    <div class="daily-tbl">
-      <table>
-        <thead><tr>
-          <th>Date</th><th>Spend</th><th>Impressions</th><th>Reach</th><th>CPM</th>
-          <th>Link clicks</th><th>Link CTR</th><th>CPC</th>
-          <th>LPV</th><th>Cost / LPV</th><th>Purch.</th>
-        </tr></thead>
-        <tbody>
-          <tr><td>Tue Sep 9</td><td class="big">$393.75</td><td class="big">11,951</td><td>9,247</td><td>$32.95</td><td class="big">184</td><td>1.54%</td><td>$2.14</td><td class="big">160</td><td>$2.46</td><td>0</td></tr>
-          <tr><td>Wed Sep 10</td><td class="big">$369.34</td><td class="big">20,405</td><td>16,424</td><td>$18.10</td><td class="big">196</td><td>0.96%</td><td>$1.88</td><td class="big">157</td><td>$2.35</td><td>1<span class="pill">sale</span></td></tr>
-          <tr><td>Thu Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,562</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td>0</td></tr>
-          <tr><td>Fri Sep 12</td><td class="big">$274.27</td><td class="big">15,748</td><td>13,817</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td>0</td></tr>
-          <tr><td>Sat Sep 13</td><td class="big">$471.76</td><td class="big">25,740</td><td>20,054</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.38</td><td>1<span class="pill">sale</span></td></tr>
-          <tr><td>Sun Sep 14</td><td class="big">$392.84</td><td class="big">17,353</td><td>14,506</td><td>$22.64</td><td class="big">562</td><td>3.24%</td><td>$0.70</td><td class="big">520</td><td>$0.76</td><td>0<span class="pill">consolidated</span></td></tr>
-          <tr class="today"><td>Mon Sep 15</td><td class="big">$269.32</td><td class="big">14,762</td><td>13,728</td><td>$18.24</td><td class="big">369</td><td>2.50%</td><td>$0.73</td><td class="big">332</td><td>$0.81</td><td>0<span class="live">today</span></td></tr>
-          <tr class="avg"><td>Daily average</td><td>$345.99</td><td>16,219</td><td>13,477</td><td>$22.97</td><td>302</td><td>1.87%</td><td>$1.14</td><td>269</td><td>$1.28</td><td>0.29</td></tr>
-          <tr class="tot"><td>7-day total</td><td>$2,421.94</td><td>113,535</td><td>94,338</td><td>$21.33</td><td>2,117</td><td>1.87%</td><td>$1.14</td><td>1,886</td><td>$1.28</td><td>2</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="label">Day by day · every metric · Sep 3 to Sep 15 · 13 days</div>
+    <h2>Thirteen days<br/>of <span style="color:var(--wine)">truth.</span></h2>
+    <p>Aggregated across every ecommerce ad set that delivered that day. Sep 3 to 8: Adset 1 + Adset 2. Sep 9 to 14: Adset 2 + Adset 3. Sep 14 is the consolidation into Adset 2. Sep 15: Adset 2 + new Adset 4, full final day.</p>
+    <div class="daily-tbl"><table>
+      <thead><tr><th>Date</th><th>Spend</th><th>Impressions</th><th>Reach</th><th>CPM</th><th>Link clicks</th><th>Link CTR</th><th>CPC</th><th>LPV</th><th>Cost / LPV</th><th>Purch.</th></tr></thead>
+      <tbody>
+        <tr><td>Thu Sep 3</td><td class="big">$293.62</td><td class="big">1,032</td><td>906</td><td>$284.52</td><td class="big">57</td><td>5.52%</td><td>$5.15</td><td class="big">48</td><td>$6.12</td><td>0</td></tr><tr><td>Fri Sep 4</td><td class="big">$345.27</td><td class="big">18,462</td><td>4,982</td><td>$18.70</td><td class="big">65</td><td>0.35%</td><td>$5.31</td><td class="big">51</td><td>$6.77</td><td>0</td></tr><tr><td>Sat Sep 5</td><td class="big">$374.91</td><td class="big">8,139</td><td>4,002</td><td>$46.06</td><td class="big">88</td><td>1.08%</td><td>$4.26</td><td class="big">67</td><td>$5.60</td><td>0</td></tr><tr><td>Sun Sep 6</td><td class="big">$466.09</td><td class="big">12,567</td><td>6,068</td><td>$37.09</td><td class="big">147</td><td>1.17%</td><td>$3.17</td><td class="big">93</td><td>$5.01</td><td>0</td></tr><tr><td>Mon Sep 7</td><td class="big">$388.04</td><td class="big">10,296</td><td>6,138</td><td>$37.69</td><td class="big">107</td><td>1.04%</td><td>$3.63</td><td class="big">79</td><td>$4.91</td><td>0</td></tr><tr><td>Tue Sep 8</td><td class="big">$232.46</td><td class="big">6,650</td><td>4,483</td><td>$34.96</td><td class="big">98</td><td>1.47%</td><td>$2.37</td><td class="big">76</td><td>$3.06</td><td>0</td></tr><tr><td>Wed Sep 9</td><td class="big">$393.75</td><td class="big">11,951</td><td>9,612</td><td>$32.95</td><td class="big">184</td><td>1.54%</td><td>$2.14</td><td class="big">160</td><td>$2.46</td><td>0</td></tr><tr><td>Thu Sep 10</td><td class="big">$369.34</td><td class="big">20,405</td><td>17,128</td><td>$18.10</td><td class="big">196</td><td>0.96%</td><td>$1.88</td><td class="big">157</td><td>$2.35</td><td>1<span class="pill">sale</span></td></tr><tr><td>Fri Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,688</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td>0</td></tr><tr><td>Sat Sep 12</td><td class="big">$274.27</td><td class="big">15,748</td><td>14,051</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td>0</td></tr><tr><td>Sun Sep 13</td><td class="big">$471.76</td><td class="big">25,740</td><td>20,512</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.38</td><td>1<span class="pill">sale</span></td></tr><tr><td>Mon Sep 14</td><td class="big">$393.67</td><td class="big">17,363</td><td>14,940</td><td>$22.67</td><td class="big">562</td><td>3.24%</td><td>$0.70</td><td class="big">520</td><td>$0.76</td><td>0<span class="pill">consolidated</span></td></tr><tr class="final"><td>Tue Sep 15</td><td class="big">$496.82</td><td class="big">18,797</td><td>17,798</td><td>$26.43</td><td class="big">409</td><td>2.18%</td><td>$1.21</td><td class="big">373</td><td>$1.33</td><td>0<span class="live">final</span></td></tr>
+        <tr class="avg"><td>Daily average</td><td>$365.44</td><td>13,440</td><td>9,793</td><td>$27.19</td><td>209</td><td>1.56%</td><td>$1.75</td><td>180</td><td>$2.03</td><td>0.15</td></tr>
+        <tr class="tot"><td>13-day total</td><td>$4,750.66</td><td>174,726</td><td>127,308</td><td>$27.19</td><td>2,719</td><td>1.56%</td><td>$1.75</td><td>2,341</td><td>$2.03</td><td>2</td></tr>
+      </tbody>
+    </table></div>
   </div>
 </section>
 
-<!-- COMPARE -->
 <section class="s-compare">
   <div class="wrap">
-    <div class="label">Every metric · every day · Sep 9 → Sep 15 · side by side</div>
-    <h2>Seven days,<br/><span class="serif italic" style="color:#E9C88A">column by column.</span></h2>
-    <p>Every day of the ecommerce campaign, laid out as its own column. Read a row across to see how any single metric moved day to day. Sep 15 (today) is a partial day, pulled at 14:32 Israel time, ~10 hours into the US ad day. Green highlight = best day for that metric across the 7 days; red = worst.</p>
+    <div class="label">Every metric · every day · Sep 3 → Sep 15 · side by side</div>
+    <h2>Thirteen days,<br/><span class="serif italic" style="color:#E9C88A">column by column.</span></h2>
+    <p>Every day of the campaign as its own column, split into the two weeks so every number stays readable. Read a row across to see how any single metric moved. Green = best day in that week for that metric; red = worst. Sep 15 is a complete day.</p>
+    <div class="dgrid"><div class="gsub">Week one · Sep 3 to Sep 8 · Adset 1 + Adset 2</div><table><thead><tr><th class="metric-h">Metric</th><th class="day">Thu<span class="dd">Sep 3</span></th><th class="day">Fri<span class="dd">Sep 4</span></th><th class="day">Sat<span class="dd">Sep 5</span></th><th class="day">Sun<span class="dd">Sep 6</span></th><th class="day">Mon<span class="dd">Sep 7</span></th><th class="day">Tue<span class="dd">Sep 8</span></th></tr></thead><tbody><tr><td class="metric-h">Spend</td><td class="day">$293.62</td><td class="day">$345.27</td><td class="day">$374.91</td><td class="day best">$466.09</td><td class="day">$388.04</td><td class="day worst">$232.46</td></tr><tr><td class="metric-h">Impressions</td><td class="day worst">1,032</td><td class="day best">18,462</td><td class="day">8,139</td><td class="day">12,567</td><td class="day">10,296</td><td class="day">6,650</td></tr><tr><td class="metric-h">Reach</td><td class="day worst">906</td><td class="day">4,982</td><td class="day">4,002</td><td class="day">6,068</td><td class="day best">6,138</td><td class="day">4,483</td></tr><tr><td class="metric-h">CPM</td><td class="day worst">$284.52</td><td class="day best">$18.70</td><td class="day">$46.06</td><td class="day">$37.09</td><td class="day">$37.69</td><td class="day">$34.96</td></tr><tr><td class="metric-h">Link clicks</td><td class="day worst">57</td><td class="day">65</td><td class="day">88</td><td class="day best">147</td><td class="day">107</td><td class="day">98</td></tr><tr><td class="metric-h">Link CTR</td><td class="day best">5.52%</td><td class="day worst">0.35%</td><td class="day">1.08%</td><td class="day">1.17%</td><td class="day">1.04%</td><td class="day">1.47%</td></tr><tr><td class="metric-h">CPC (link)</td><td class="day">$5.15</td><td class="day worst">$5.31</td><td class="day">$4.26</td><td class="day">$3.17</td><td class="day">$3.63</td><td class="day best">$2.37</td></tr><tr><td class="metric-h">Landing-page views</td><td class="day worst">48</td><td class="day">51</td><td class="day">67</td><td class="day best">93</td><td class="day">79</td><td class="day">76</td></tr><tr><td class="metric-h">Cost per LPV</td><td class="day">$6.12</td><td class="day worst">$6.77</td><td class="day">$5.60</td><td class="day">$5.01</td><td class="day">$4.91</td><td class="day best">$3.06</td></tr><tr><td class="metric-h">Purchases</td><td class="day worst">0</td><td class="day worst">0</td><td class="day worst">0</td><td class="day worst">0</td><td class="day worst">0</td><td class="day worst">0</td></tr></tbody></table></div>
+    <div class="dgrid"><div class="gsub">Week two · Sep 9 to Sep 15 · Adset 2 + Adset 3, consolidated Sep 14</div><table><thead><tr><th class="metric-h">Metric</th><th class="day">Wed<span class="dd">Sep 9</span></th><th class="day">Thu<span class="dd">Sep 10</span></th><th class="day">Fri<span class="dd">Sep 11</span></th><th class="day">Sat<span class="dd">Sep 12</span></th><th class="day">Sun<span class="dd">Sep 13</span></th><th class="day">Mon<span class="dd">Sep 14</span></th><th class="day final">Tue<span class="dd">Sep 15</span></th></tr></thead><tbody><tr><td class="metric-h">Spend</td><td class="day">$393.75</td><td class="day">$369.34</td><td class="day worst">$250.66</td><td class="day">$274.27</td><td class="day">$471.76</td><td class="day">$393.67</td><td class="day final best">$496.82</td></tr><tr><td class="metric-h">Impressions</td><td class="day">11,951</td><td class="day">20,405</td><td class="day worst">7,576</td><td class="day">15,748</td><td class="day best">25,740</td><td class="day">17,363</td><td class="day final">18,797</td></tr><tr><td class="metric-h">Reach</td><td class="day">9,612</td><td class="day">17,128</td><td class="day worst">6,688</td><td class="day">14,051</td><td class="day best">20,512</td><td class="day">14,940</td><td class="day final">17,798</td></tr><tr><td class="metric-h">CPM</td><td class="day">$32.95</td><td class="day">$18.10</td><td class="day worst">$33.09</td><td class="day best">$17.42</td><td class="day">$18.33</td><td class="day">$22.67</td><td class="day final">$26.43</td></tr><tr><td class="metric-h">Link clicks</td><td class="day">184</td><td class="day">196</td><td class="day worst">76</td><td class="day">342</td><td class="day">388</td><td class="day best">562</td><td class="day final">409</td></tr><tr><td class="metric-h">Link CTR</td><td class="day">1.54%</td><td class="day worst">0.96%</td><td class="day">1.00%</td><td class="day">2.17%</td><td class="day">1.51%</td><td class="day best">3.24%</td><td class="day final">2.18%</td></tr><tr><td class="metric-h">CPC (link)</td><td class="day">$2.14</td><td class="day">$1.88</td><td class="day worst">$3.30</td><td class="day">$0.80</td><td class="day">$1.22</td><td class="day best">$0.70</td><td class="day final">$1.21</td></tr><tr><td class="metric-h">Landing-page views</td><td class="day">160</td><td class="day">157</td><td class="day worst">65</td><td class="day">309</td><td class="day">343</td><td class="day best">520</td><td class="day final">373</td></tr><tr><td class="metric-h">Cost per LPV</td><td class="day">$2.46</td><td class="day">$2.35</td><td class="day worst">$3.86</td><td class="day">$0.89</td><td class="day">$1.38</td><td class="day best">$0.76</td><td class="day final">$1.33</td></tr><tr><td class="metric-h">Purchases</td><td class="day worst">0</td><td class="day best">1</td><td class="day worst">0</td><td class="day worst">0</td><td class="day best">1</td><td class="day worst">0</td><td class="day final worst">0</td></tr></tbody></table></div>
+    <div class="compare-note">Sep 15 is final: the ad account runs on Israel time, and the pull was made at 02:40 IDT on Sep 16, after the day closed.</div>
 
-    <div class="dgrid">
-      <table>
-        <thead>
-          <tr>
-            <th class="metric-h">Metric</th>
-            <th class="day">Tue<span class="dd">Sep 9</span></th>
-            <th class="day">Wed<span class="dd">Sep 10</span></th>
-            <th class="day">Thu<span class="dd">Sep 11</span></th>
-            <th class="day">Fri<span class="dd">Sep 12</span></th>
-            <th class="day">Sat<span class="dd">Sep 13</span></th>
-            <th class="day">Sun<span class="dd">Sep 14</span></th>
-            <th class="day today">Mon<span class="dd">Sep 15</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="metric-h">Spend</td>
-            <td class="day">$393.75</td>
-            <td class="day">$369.34</td>
-            <td class="day worst">$250.66</td>
-            <td class="day">$274.27</td>
-            <td class="day best">$471.76</td>
-            <td class="day">$392.84</td>
-            <td class="day today">$269.32<span class="sub">partial · 10h in</span></td>
-          </tr>
-          <tr>
-            <td class="metric-h">Impressions</td>
-            <td class="day">11,951</td>
-            <td class="day">20,405</td>
-            <td class="day worst">7,576</td>
-            <td class="day">15,748</td>
-            <td class="day best">25,740</td>
-            <td class="day">17,353</td>
-            <td class="day today">14,762<span class="sub">partial</span></td>
-          </tr>
-          <tr>
-            <td class="metric-h">Reach</td>
-            <td class="day">9,247</td>
-            <td class="day">16,424</td>
-            <td class="day worst">6,562</td>
-            <td class="day">13,817</td>
-            <td class="day best">20,054</td>
-            <td class="day">14,506</td>
-            <td class="day today">13,728<span class="sub">partial</span></td>
-          </tr>
-          <tr>
-            <td class="metric-h">CPM</td>
-            <td class="day">$32.95</td>
-            <td class="day">$18.10</td>
-            <td class="day worst">$33.09</td>
-            <td class="day best">$17.42</td>
-            <td class="day">$18.33</td>
-            <td class="day">$22.64</td>
-            <td class="day today">$18.24</td>
-          </tr>
-          <tr>
-            <td class="metric-h">Link clicks</td>
-            <td class="day">184</td>
-            <td class="day">196</td>
-            <td class="day worst">76</td>
-            <td class="day">342</td>
-            <td class="day">388</td>
-            <td class="day best">562</td>
-            <td class="day today">369<span class="sub">partial</span></td>
-          </tr>
-          <tr>
-            <td class="metric-h">Link CTR</td>
-            <td class="day">1.54%</td>
-            <td class="day worst">0.96%</td>
-            <td class="day">1.00%</td>
-            <td class="day">2.17%</td>
-            <td class="day">1.51%</td>
-            <td class="day best">3.24%</td>
-            <td class="day today">2.50%</td>
-          </tr>
-          <tr>
-            <td class="metric-h">CPC (link)</td>
-            <td class="day">$2.14</td>
-            <td class="day">$1.88</td>
-            <td class="day worst">$3.30</td>
-            <td class="day">$0.80</td>
-            <td class="day">$1.22</td>
-            <td class="day">$0.70</td>
-            <td class="day today best">$0.73</td>
-          </tr>
-          <tr>
-            <td class="metric-h">Landing-page views</td>
-            <td class="day">160</td>
-            <td class="day">157</td>
-            <td class="day worst">65</td>
-            <td class="day">309</td>
-            <td class="day">343</td>
-            <td class="day best">520</td>
-            <td class="day today">332<span class="sub">partial</span></td>
-          </tr>
-          <tr>
-            <td class="metric-h">Cost per LPV</td>
-            <td class="day">$2.46</td>
-            <td class="day">$2.35</td>
-            <td class="day worst">$3.86</td>
-            <td class="day">$0.89</td>
-            <td class="day">$1.38</td>
-            <td class="day best">$0.76</td>
-            <td class="day today">$0.81</td>
-          </tr>
-          <tr>
-            <td class="metric-h">Purchases</td>
-            <td class="day worst">0</td>
-            <td class="day best">1</td>
-            <td class="day worst">0</td>
-            <td class="day worst">0</td>
-            <td class="day best">1</td>
-            <td class="day worst">0</td>
-            <td class="day today worst">0<span class="sub">so far</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="compare-note">Green = best day of the 7 for that metric. Red = worst. Sep 15 numbers pulled 14:32 IDT · approximately 10 hours into the US ad day.</div>
-
-    <!-- FINAL 3-CARD SUMMARY -->
     <div class="compare3">
-      <div class="c3-card">
-        <div class="c3-hd">Yesterday</div>
-        <div class="c3-day">Sun Sep 14</div>
-        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$392.84</div></div>
-        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">17,353</div></div>
-        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">14,506</div></div>
-        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$22.64</div></div>
-        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">562</div></div>
-        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">3.24%</div></div>
-        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$0.70</div></div>
-        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">520</div></div>
-        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$0.76</div></div>
-        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div>
-      </div>
-
-      <div class="c3-card today">
-        <div class="c3-hd">Today · LIVE · pulled 14:32 IDT</div>
-        <div class="c3-day">Mon Sep 15</div>
-        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$269.32</div></div>
-        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">14,762</div></div>
-        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">13,728</div></div>
-        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$18.24</div></div>
-        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">369</div></div>
-        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">2.50%</div></div>
-        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$0.73</div></div>
-        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">332</div></div>
-        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$0.81</div></div>
-        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div>
-      </div>
-
-      <div class="c3-card avg">
-        <div class="c3-hd">7-day daily average · Sep 9–15</div>
-        <div class="c3-day">Baseline</div>
-        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$345.99</div></div>
-        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">16,219</div></div>
-        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">13,477</div></div>
-        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$22.97</div></div>
-        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">302</div></div>
-        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">1.87%</div></div>
-        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$1.54</div></div>
-        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">269</div></div>
-        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$1.79</div></div>
-        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0.29</div></div>
-      </div>
+      <div class="c3-card "><div class="c3-hd">Two days ago · consolidation day</div><div class="c3-day">Sun Sep 14</div><div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$393.67</div></div><div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">17,363</div></div><div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">14,940</div></div><div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$22.67</div></div><div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">562</div></div><div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">3.24%</div></div><div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$0.70</div></div><div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">520</div></div><div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$0.76</div></div><div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div></div>
+      <div class="c3-card today"><div class="c3-hd">Yesterday · FINAL · full day</div><div class="c3-day">Mon Sep 15</div><div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$496.82</div></div><div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">18,797</div></div><div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">17,798</div></div><div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$26.43</div></div><div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">409</div></div><div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">2.18%</div></div><div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$1.21</div></div><div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">373</div></div><div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$1.33</div></div><div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div></div>
+      <div class="c3-card avg"><div class="c3-hd">13-day daily average · Sep 3–15</div><div class="c3-day">Baseline</div><div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$365.44</div></div><div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">13,440</div></div><div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">9,793</div></div><div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$27.19</div></div><div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">209</div></div><div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">1.56%</div></div><div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$1.75</div></div><div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">180</div></div><div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$2.03</div></div><div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0.15</div></div></div>
     </div>
 
     <div class="pace-headline">
-      <div class="ph good">
-        <div class="p-lbl">Traffic quality vs yesterday</div>
-        <div class="p-val">Better</div>
-        <div class="p-sub">CPM 19% cheaper, frequency 10% fresher, LPV rate flat at 90%. Ad delivery is not the problem today.</div>
-      </div>
-      <div class="ph warn">
-        <div class="p-lbl">Click engagement vs yesterday</div>
-        <div class="p-val">Softer</div>
-        <div class="p-sub">Link CTR 2.52% vs 3.24% yesterday — down 22%. Same creatives, same consolidated adset. Weekday vs Sunday effect likely; watch tonight.</div>
-      </div>
-      <div class="ph warn">
-        <div class="p-lbl">Conversions vs yesterday</div>
-        <div class="p-val">Zero</div>
-        <div class="p-sub">0 sales today so far, 0 yesterday. Same two-day dry spell. Traffic is landing, checkout is not converting.</div>
-      </div>
+      <div class="ph warn"><div class="p-lbl">Traffic vs Sep 14</div><div class="p-val">Pricier</div><div class="p-sub">CPM 17% higher at $26.43, frequency 1.06× vs 1.16×, spend up 26% to $496.82. Delivery is not the problem.</div></div>
+      <div class="ph warn"><div class="p-lbl">Click engagement vs Sep 14</div><div class="p-val">Softer</div><div class="p-sub">Link CTR 2.18% vs 3.24%, down 33%. Landing-page views 373 vs 520 on 26% more spend: cost per LPV rose to $1.33 from $0.76.</div></div>
+      <div class="ph warn"><div class="p-lbl">Conversions vs Sep 14</div><div class="p-val">Zero</div><div class="p-sub">0 sales on Sep 15, 0 on Sep 14. Two full days and 893 landing-page views without a purchase. Traffic is landing, checkout is not converting.</div></div>
     </div>
+  </div>
+</section>
+
+<section class="s-age first" id="age-total">
+  <div class="wrap">
+    <div class="label">Slide 1 · Landing-page views by age · All 13 days · Sep 3 to Sep 15</div>
+    <h2>All 13 days · Sep 3 to Sep 15<br/><span class="serif italic" style="color:#E9C88A">2,341 landing-page views.</span></h2>
+    <p class="agesub">Where the 2,341 landing-page views landed by age band across the whole campaign. Both purchases came from 45 to 54. Green bar = largest band.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.7%"></div></div>
+  <div class="anum">8<span class="ash">0%</span></div>
+  <div class="ameta">$44.57 spend<br/>$5.57 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:5.8%"></div></div>
+  <div class="anum">66<span class="ash">3%</span></div>
+  <div class="ameta">$268.61 spend<br/>$4.07 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:16.6%"></div></div>
+  <div class="anum">190<span class="ash">8%</span></div>
+  <div class="ameta">$495.37 spend<br/>$2.61 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:26.5%"></div></div>
+  <div class="anum">303<span class="ash">13%</span></div>
+  <div class="ameta">$692.18 spend<br/>$2.28 / LPV<span class="apill">2 sales</span></div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:54.9%"></div></div>
+  <div class="anum">628<span class="ash">27%</span></div>
+  <div class="ameta">$1,318.29 spend<br/>$2.10 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">1,144<span class="ash">49%</span></div>
+  <div class="ameta">$1,931.63 spend<br/>$1.69 / LPV</div>
+</div><div class="arow">
+  <div class="aband">Unknown</div>
+  <div class="abar"><div class="afill" style="width:0.2%"></div></div>
+  <div class="anum">2<span class="ash">0%</span></div>
+  <div class="ameta">$0.00 spend<br/>no spend</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $4,750.66 · 2 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-03">
+  <div class="wrap">
+    <div class="label">Slide 2 · Landing-page views by age · Thu Sep 3</div>
+    <h2>Thu Sep 3<br/><span class="serif italic" style="color:#E9C88A">48 landing-page views.</span></h2>
+    <p class="agesub">Thu Sep 3: $293.62 spend, 1,032 impressions, 57 link clicks, 48 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$0.59 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:3.4%"></div></div>
+  <div class="anum">1<span class="ash">2%</span></div>
+  <div class="ameta">$4.64 spend<br/>$4.64 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:17.2%"></div></div>
+  <div class="anum">5<span class="ash">10%</span></div>
+  <div class="ameta">$10.90 spend<br/>$2.18 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:10.3%"></div></div>
+  <div class="anum">3<span class="ash">6%</span></div>
+  <div class="ameta">$25.78 spend<br/>$8.59 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:34.5%"></div></div>
+  <div class="anum">10<span class="ash">21%</span></div>
+  <div class="ameta">$88.25 spend<br/>$8.82 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">29<span class="ash">60%</span></div>
+  <div class="ameta">$163.46 spend<br/>$5.64 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $293.62 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-04">
+  <div class="wrap">
+    <div class="label">Slide 3 · Landing-page views by age · Fri Sep 4</div>
+    <h2>Fri Sep 4<br/><span class="serif italic" style="color:#E9C88A">51 landing-page views.</span></h2>
+    <p class="agesub">Fri Sep 4: $345.27 spend, 18,462 impressions, 65 link clicks, 51 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$0.68 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:9.7%"></div></div>
+  <div class="anum">3<span class="ash">6%</span></div>
+  <div class="ameta">$6.44 spend<br/>$2.15 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:9.7%"></div></div>
+  <div class="anum">3<span class="ash">6%</span></div>
+  <div class="ameta">$11.17 spend<br/>$3.72 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:12.9%"></div></div>
+  <div class="anum">4<span class="ash">8%</span></div>
+  <div class="ameta">$52.78 spend<br/>$13.20 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:32.3%"></div></div>
+  <div class="anum">10<span class="ash">20%</span></div>
+  <div class="ameta">$93.64 spend<br/>$9.36 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">31<span class="ash">61%</span></div>
+  <div class="ameta">$180.55 spend<br/>$5.82 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $345.27 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-05">
+  <div class="wrap">
+    <div class="label">Slide 4 · Landing-page views by age · Sat Sep 5</div>
+    <h2>Sat Sep 5<br/><span class="serif italic" style="color:#E9C88A">67 landing-page views.</span></h2>
+    <p class="agesub">Sat Sep 5: $374.91 spend, 8,139 impressions, 88 link clicks, 67 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:2.9%"></div></div>
+  <div class="anum">1<span class="ash">1%</span></div>
+  <div class="ameta">$3.39 spend<br/>$3.39 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:2.9%"></div></div>
+  <div class="anum">1<span class="ash">1%</span></div>
+  <div class="ameta">$17.77 spend<br/>$17.77 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:26.5%"></div></div>
+  <div class="anum">9<span class="ash">13%</span></div>
+  <div class="ameta">$39.28 spend<br/>$4.36 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:26.5%"></div></div>
+  <div class="anum">9<span class="ash">13%</span></div>
+  <div class="ameta">$54.19 spend<br/>$6.02 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:38.2%"></div></div>
+  <div class="anum">13<span class="ash">19%</span></div>
+  <div class="ameta">$104.07 spend<br/>$8.01 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">34<span class="ash">51%</span></div>
+  <div class="ameta">$156.21 spend<br/>$4.59 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $374.91 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-06">
+  <div class="wrap">
+    <div class="label">Slide 5 · Landing-page views by age · Sun Sep 6</div>
+    <h2>Sun Sep 6<br/><span class="serif italic" style="color:#E9C88A">93 landing-page views.</span></h2>
+    <p class="agesub">Sun Sep 6: $466.09 spend, 12,567 impressions, 147 link clicks, 93 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$10.47 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:17.5%"></div></div>
+  <div class="anum">7<span class="ash">8%</span></div>
+  <div class="ameta">$51.41 spend<br/>$7.34 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:22.5%"></div></div>
+  <div class="anum">9<span class="ash">10%</span></div>
+  <div class="ameta">$45.31 spend<br/>$5.03 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:32.5%"></div></div>
+  <div class="anum">13<span class="ash">14%</span></div>
+  <div class="ameta">$64.32 spend<br/>$4.95 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:60.0%"></div></div>
+  <div class="anum">24<span class="ash">26%</span></div>
+  <div class="ameta">$95.19 spend<br/>$3.97 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">40<span class="ash">43%</span></div>
+  <div class="ameta">$199.38 spend<br/>$4.98 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $466.09 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-07">
+  <div class="wrap">
+    <div class="label">Slide 6 · Landing-page views by age · Mon Sep 7</div>
+    <h2>Mon Sep 7<br/><span class="serif italic" style="color:#E9C88A">79 landing-page views.</span></h2>
+    <p class="agesub">Mon Sep 7: $388.04 spend, 10,296 impressions, 107 link clicks, 79 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:8.3%"></div></div>
+  <div class="anum">3<span class="ash">4%</span></div>
+  <div class="ameta">$11.26 spend<br/>$3.75 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:22.2%"></div></div>
+  <div class="anum">8<span class="ash">10%</span></div>
+  <div class="ameta">$43.51 spend<br/>$5.44 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:19.4%"></div></div>
+  <div class="anum">7<span class="ash">9%</span></div>
+  <div class="ameta">$41.60 spend<br/>$5.94 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:33.3%"></div></div>
+  <div class="anum">12<span class="ash">15%</span></div>
+  <div class="ameta">$41.96 spend<br/>$3.50 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:36.1%"></div></div>
+  <div class="anum">13<span class="ash">16%</span></div>
+  <div class="ameta">$75.84 spend<br/>$5.83 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">36<span class="ash">46%</span></div>
+  <div class="ameta">$173.86 spend<br/>$4.83 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $388.04 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-08">
+  <div class="wrap">
+    <div class="label">Slide 7 · Landing-page views by age · Tue Sep 8</div>
+    <h2>Tue Sep 8<br/><span class="serif italic" style="color:#E9C88A">76 landing-page views.</span></h2>
+    <p class="agesub">Tue Sep 8: $232.46 spend, 6,650 impressions, 98 link clicks, 76 landing-page views, 0 purchases. Ad sets delivering: Adset 1, Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:4.2%"></div></div>
+  <div class="anum">2<span class="ash">3%</span></div>
+  <div class="ameta">$7.77 spend<br/>$3.89 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:2.1%"></div></div>
+  <div class="anum">1<span class="ash">1%</span></div>
+  <div class="ameta">$25.76 spend<br/>$25.76 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:12.5%"></div></div>
+  <div class="anum">6<span class="ash">8%</span></div>
+  <div class="ameta">$22.61 spend<br/>$3.77 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:12.5%"></div></div>
+  <div class="anum">6<span class="ash">8%</span></div>
+  <div class="ameta">$26.37 spend<br/>$4.40 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:27.1%"></div></div>
+  <div class="anum">13<span class="ash">17%</span></div>
+  <div class="ameta">$48.87 spend<br/>$3.76 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">48<span class="ash">63%</span></div>
+  <div class="ameta">$101.06 spend<br/>$2.11 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $232.46 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-09">
+  <div class="wrap">
+    <div class="label">Slide 8 · Landing-page views by age · Wed Sep 9</div>
+    <h2>Wed Sep 9<br/><span class="serif italic" style="color:#E9C88A">160 landing-page views.</span></h2>
+    <p class="agesub">Wed Sep 9: $393.75 spend, 11,951 impressions, 184 link clicks, 160 landing-page views, 0 purchases. Ad sets delivering: Adset 2, Adset 3.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:1.0%"></div></div>
+  <div class="anum">1<span class="ash">1%</span></div>
+  <div class="ameta">$4.57 spend<br/>$4.57 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:2.0%"></div></div>
+  <div class="anum">2<span class="ash">1%</span></div>
+  <div class="ameta">$9.33 spend<br/>$4.67 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:7.0%"></div></div>
+  <div class="anum">7<span class="ash">4%</span></div>
+  <div class="ameta">$24.59 spend<br/>$3.51 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:22.0%"></div></div>
+  <div class="anum">22<span class="ash">14%</span></div>
+  <div class="ameta">$64.86 spend<br/>$2.95 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:27.0%"></div></div>
+  <div class="anum">27<span class="ash">17%</span></div>
+  <div class="ameta">$132.33 spend<br/>$4.90 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">100<span class="ash">62%</span></div>
+  <div class="ameta">$158.08 spend<br/>$1.58 / LPV</div>
+</div><div class="arow">
+  <div class="aband">Unknown</div>
+  <div class="abar"><div class="afill" style="width:1.0%"></div></div>
+  <div class="anum">1<span class="ash">1%</span></div>
+  <div class="ameta">$0.00 spend<br/>no spend</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $393.75 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-10">
+  <div class="wrap">
+    <div class="label">Slide 9 · Landing-page views by age · Thu Sep 10</div>
+    <h2>Thu Sep 10<br/><span class="serif italic" style="color:#E9C88A">157 landing-page views.</span></h2>
+    <p class="agesub">Thu Sep 10: $369.34 spend, 20,405 impressions, 196 link clicks, 157 landing-page views, 1 purchase. Ad sets delivering: Adset 2, Adset 3.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$0.70 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:15.1%"></div></div>
+  <div class="anum">8<span class="ash">5%</span></div>
+  <div class="ameta">$33.89 spend<br/>$4.24 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:62.3%"></div></div>
+  <div class="anum">33<span class="ash">21%</span></div>
+  <div class="ameta">$73.08 spend<br/>$2.21 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:54.7%"></div></div>
+  <div class="anum">29<span class="ash">18%</span></div>
+  <div class="ameta">$72.71 spend<br/>$2.51 / LPV<span class="apill">1 sale</span></div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:64.2%"></div></div>
+  <div class="anum">34<span class="ash">22%</span></div>
+  <div class="ameta">$92.53 spend<br/>$2.72 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">53<span class="ash">34%</span></div>
+  <div class="ameta">$96.43 spend<br/>$1.82 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $369.34 · 1 purchase · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-11">
+  <div class="wrap">
+    <div class="label">Slide 10 · Landing-page views by age · Fri Sep 11</div>
+    <h2>Fri Sep 11<br/><span class="serif italic" style="color:#E9C88A">65 landing-page views.</span></h2>
+    <p class="agesub">Fri Sep 11: $250.66 spend, 7,576 impressions, 76 link clicks, 65 landing-page views, 0 purchases. Ad sets delivering: Adset 2, Adset 3.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$1.22 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:14.3%"></div></div>
+  <div class="anum">3<span class="ash">5%</span></div>
+  <div class="ameta">$20.30 spend<br/>$6.77 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:66.7%"></div></div>
+  <div class="anum">14<span class="ash">22%</span></div>
+  <div class="ameta">$67.64 spend<br/>$4.83 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:61.9%"></div></div>
+  <div class="anum">13<span class="ash">20%</span></div>
+  <div class="ameta">$58.46 spend<br/>$4.50 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:66.7%"></div></div>
+  <div class="anum">14<span class="ash">22%</span></div>
+  <div class="ameta">$51.46 spend<br/>$3.68 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">21<span class="ash">32%</span></div>
+  <div class="ameta">$51.60 spend<br/>$2.46 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $250.66 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-12">
+  <div class="wrap">
+    <div class="label">Slide 11 · Landing-page views by age · Sat Sep 12</div>
+    <h2>Sat Sep 12<br/><span class="serif italic" style="color:#E9C88A">309 landing-page views.</span></h2>
+    <p class="agesub">Sat Sep 12: $274.27 spend, 15,748 impressions, 342 link clicks, 309 landing-page views, 0 purchases. Ad sets delivering: Adset 2, Adset 3.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$0.65 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:6.7%"></div></div>
+  <div class="anum">9<span class="ash">3%</span></div>
+  <div class="ameta">$10.30 spend<br/>$1.14 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:20.9%"></div></div>
+  <div class="anum">28<span class="ash">9%</span></div>
+  <div class="ameta">$34.48 spend<br/>$1.23 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:33.6%"></div></div>
+  <div class="anum">45<span class="ash">15%</span></div>
+  <div class="ameta">$47.35 spend<br/>$1.05 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:69.4%"></div></div>
+  <div class="anum">93<span class="ash">30%</span></div>
+  <div class="ameta">$92.41 spend<br/>$0.99 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">134<span class="ash">43%</span></div>
+  <div class="ameta">$89.09 spend<br/>$0.66 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $274.27 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-13">
+  <div class="wrap">
+    <div class="label">Slide 12 · Landing-page views by age · Sun Sep 13</div>
+    <h2>Sun Sep 13<br/><span class="serif italic" style="color:#E9C88A">343 landing-page views.</span></h2>
+    <p class="agesub">Sun Sep 13: $471.76 spend, 25,740 impressions, 388 link clicks, 343 landing-page views, 1 purchase. Ad sets delivering: Adset 2, Adset 3.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$1.78 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:4.8%"></div></div>
+  <div class="anum">8<span class="ash">2%</span></div>
+  <div class="ameta">$21.14 spend<br/>$2.64 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:15.2%"></div></div>
+  <div class="anum">25<span class="ash">7%</span></div>
+  <div class="ameta">$56.42 spend<br/>$2.26 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:30.9%"></div></div>
+  <div class="anum">51<span class="ash">15%</span></div>
+  <div class="ameta">$68.78 spend<br/>$1.35 / LPV<span class="apill">1 sale</span></div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:56.4%"></div></div>
+  <div class="anum">93<span class="ash">27%</span></div>
+  <div class="ameta">$158.19 spend<br/>$1.70 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">165<span class="ash">48%</span></div>
+  <div class="ameta">$165.45 spend<br/>$1.00 / LPV</div>
+</div><div class="arow">
+  <div class="aband">Unknown</div>
+  <div class="abar"><div class="afill" style="width:0.6%"></div></div>
+  <div class="anum">1<span class="ash">0%</span></div>
+  <div class="ameta">$0.00 spend<br/>no spend</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $471.76 · 1 purchase · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-14">
+  <div class="wrap">
+    <div class="label">Slide 13 · Landing-page views by age · Mon Sep 14</div>
+    <h2>Mon Sep 14<br/><span class="serif italic" style="color:#E9C88A">520 landing-page views.</span></h2>
+    <p class="agesub">Mon Sep 14: $393.67 spend, 17,363 impressions, 562 link clicks, 520 landing-page views, 0 purchases. Ad sets delivering: Adset 2, Adset 3. Consolidation day: Adset 3 folded into Adset 2.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.4%"></div></div>
+  <div class="anum">1<span class="ash">0%</span></div>
+  <div class="ameta">$0.74 spend<br/>$0.74 / LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:3.2%"></div></div>
+  <div class="anum">9<span class="ash">2%</span></div>
+  <div class="ameta">$12.95 spend<br/>$1.44 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:8.6%"></div></div>
+  <div class="anum">24<span class="ash">5%</span></div>
+  <div class="ameta">$31.19 spend<br/>$1.30 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:18.0%"></div></div>
+  <div class="anum">50<span class="ash">10%</span></div>
+  <div class="ameta">$47.78 spend<br/>$0.96 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:56.8%"></div></div>
+  <div class="anum">158<span class="ash">30%</span></div>
+  <div class="ameta">$137.47 spend<br/>$0.87 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">278<span class="ash">53%</span></div>
+  <div class="ameta">$163.55 spend<br/>$0.59 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $393.67 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section><section class="s-age" id="age-2026-09-15">
+  <div class="wrap">
+    <div class="label">Slide 14 · Landing-page views by age · Tue Sep 15</div>
+    <h2>Tue Sep 15<br/><span class="serif italic" style="color:#E9C88A">373 landing-page views.</span></h2>
+    <p class="agesub">Tue Sep 15: $496.82 spend, 18,797 impressions, 409 link clicks, 373 landing-page views, 0 purchases. Ad sets delivering: Adset 2, Adset 4. Full day, final: Adset 4 went live with $51.18 spend and 3 views.</p>
+    <div class="agegrid">
+      <div class="agehead"><span>Age band</span><span></span><span>LPV · share</span><span>Spend · cost per LPV</span></div>
+      <div class="arow">
+  <div class="aband">18-24</div>
+  <div class="abar"><div class="afill" style="width:0.0%"></div></div>
+  <div class="anum">0<span class="ash">0%</span></div>
+  <div class="ameta">$0.75 spend<br/>no LPV</div>
+</div><div class="arow">
+  <div class="aband">25-34</div>
+  <div class="abar"><div class="afill" style="width:3.4%"></div></div>
+  <div class="anum">6<span class="ash">2%</span></div>
+  <div class="ameta">$11.17 spend<br/>$1.86 / LPV</div>
+</div><div class="arow">
+  <div class="aband">35-44</div>
+  <div class="abar"><div class="afill" style="width:11.4%"></div></div>
+  <div class="anum">20<span class="ash">5%</span></div>
+  <div class="ameta">$37.10 spend<br/>$1.85 / LPV</div>
+</div><div class="arow">
+  <div class="aband">45-54</div>
+  <div class="abar"><div class="afill" style="width:26.3%"></div></div>
+  <div class="anum">46<span class="ash">12%</span></div>
+  <div class="ameta">$66.84 spend<br/>$1.45 / LPV</div>
+</div><div class="arow">
+  <div class="aband">55-64</div>
+  <div class="abar"><div class="afill" style="width:72.0%"></div></div>
+  <div class="anum">126<span class="ash">34%</span></div>
+  <div class="ameta">$148.04 spend<br/>$1.17 / LPV</div>
+</div><div class="arow top">
+  <div class="aband">65+</div>
+  <div class="abar"><div class="afill" style="width:100.0%"></div></div>
+  <div class="anum">175<span class="ash">47%</span></div>
+  <div class="ameta">$232.91 spend<br/>$1.33 / LPV</div>
+</div>
+    </div>
+    <div class="agefoot">Spend $496.82 · 0 purchases · bands with zero LPV still show their spend. Age source: Meta age breakdown on the ecommerce campaign, all ad sets.</div>
+  </div>
+</section>
+
+
+<section class="s-actions">
+  <div class="wrap">
+    <div class="label">Immediate actions · no tests · no new learning phases · Sep 16</div>
+    <h2>Sell <span class="serif italic" style="color:#E9C88A">today.</span></h2>
+    <p>Every action below can be executed in Ads Manager in under a minute and none of them resets the one ad set that carries all the signal. The math to hold in mind: 2,341 landing-page views produced 2 purchases, one sale per 1,170 views.</p>
+
+    <div class="act"><div class="n">1</div><div>
+      <h3>Pause ecomm Adset 4 and ecomm Adset 5 now.</h3>
+      <p>Both were created Sep 15 to 16. They are brand-new learning phases with the same states, same age range and the same ads as Adset 2. Adset 4 spent $51.18 on Sep 15 for 130 impressions and 3 landing-page views, a CPM of $393.69 against $23.87 on Adset 2 the same day. They split budget and auction pressure away from the ad set that already has 1,710 landing-page views and both purchases.</p>
+      <div class="why">Frees $300 per day with zero learning cost</div>
+    </div></div>
+
+    <div class="act"><div class="n">2</div><div>
+      <h3>Raise ecomm Adset 2 from $360 to $500 today, $600 tomorrow.</h3>
+      <p>Adset 2 already delivered $445.64 on Sep 15 for 370 landing-page views at $1.20 each, so the algorithm is already pacing near $450. It is at 2 conversions in 7 days against the 50 needed to exit learning: there is no exited-learning state to lose, so a budget increase cannot set it back. Two steps instead of one keeps the daily change under 40% and keeps cost per LPV from spiking.</p>
+      <div class="why">Same ad set, same signal, ~40% more views today</div>
+    </div></div>
+
+    <div class="act"><div class="n">3</div><div>
+      <h3>Pause the four Courtney ads inside Adset 2.</h3>
+      <p>Last 7 days inside Adset 2: Courtney ads spent $91.54 for 7 landing-page views ($13.08 per view) and zero purchases. Julie 65-second video: $1,011.19 for 1,322 views ($0.76 per view) and 1 purchase. Julie static: $564.04 for 50 views and 1 purchase. Pausing ads inside an ad set does not restart the ad set. Keep both Julie ads live.</p>
+      <div class="why">100% of spend on the two ads that have ever sold</div>
+    </div></div>
+
+    <div class="act"><div class="n">4</div><div>
+      <h3>Do not touch Adset 2 targeting today. Read the age data anyway.</h3>
+      <p>Across all 13 days, 65+ took 49% of landing-page views (1,144) and 55 to 64 took 27% (628), with zero purchases between them. Both purchases came from 45 to 54, which had only 13% of views (303). Two sales are not decision-grade and 65+ is also the cheapest traffic at $1.69 per view. Editing age on Adset 2 is a targeting change and would restart it, so it stays as is. The daily age slides below make the shift visible day by day.</p>
+      <div class="why">No reset. The signal is logged, not acted on blind</div>
+    </div></div>
+
+    <div class="act"><div class="n">5</div><div>
+      <h3>The sales you need today come from the checkout, not the auction.</h3>
+      <p>At the observed one sale per 1,170 landing-page views, even $600 a day on Adset 2 delivers roughly 450 views and about 0.4 sales per day. Ten sales in seven days needs the landing page to convert at least 3x better or warm traffic that costs nothing to buy: the ActiveCampaign list and every lead on file should receive the $179 per month offer today, and the $179 per month price must be the first thing visible above the fold on the landing page and the checkout.</p>
+      <div class="why">Zero media cost, zero learning, same day</div>
+    </div></div>
   </div>
 </section>
 
 <footer>
-  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads API, campaign LGV_EN_PPC_ecomm-01_2026-09-02_#118148, Sep 9 to Sep 15, 2026. All active ecommerce ad sets. Sep 14: consolidation of ecomm Adset 1 into ecomm Adset 2. Sep 15 partial · pulled 13:34 IDT · approximately 9 hours into the US ad day.
+  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads API, campaign LGV_EN_PPC_ecomm-01_2026-09-02_#118148, Sep 3 to Sep 15, 2026, all ecommerce ad sets. Account time zone: Israel. Pulled 02:40 IDT, Sep 16, 2026: Sep 15 is a complete day. Sep 14: consolidation of ecomm Adset 3 into ecomm Adset 2. Age breakdown from the Meta age dimension; bands sum to the daily landing-page-view total.
 </footer>
-
 </body>
 </html>
