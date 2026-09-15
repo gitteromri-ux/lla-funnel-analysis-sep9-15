@@ -85,40 +85,51 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:900px;margin-bottom:24p
 .daily-tbl .pill{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--sage);padding:4px 10px;border-radius:4px;margin-left:8px}
 .daily-tbl .live{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin-left:8px}
 
-/* COMPARE — true side-by-side day columns */
+/* COMPARE — every day side by side + final 3-card summary */
 .s-compare{background:var(--sea);color:#F6F1E7}
 .s-compare h2,.s-compare h3{color:#F6F1E7}
 .s-compare p,.s-compare .lede{color:rgba(246,241,231,.85)}
 .s-compare .label{color:#E9C88A}
 .compare-note{font-size:15px;color:rgba(246,241,231,.60);margin-top:16px;letter-spacing:.02em}
 
-.sbs{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:60px}
-.day-col{background:rgba(255,255,255,.04);border:1px solid rgba(246,241,231,.18);border-radius:8px;padding:44px 40px}
-.day-col.today{background:rgba(233,200,138,.10);border-color:rgba(233,200,138,.55)}
-.day-col .col-hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
-.day-col .col-day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:44px;color:#F6F1E7;letter-spacing:-.01em}
-.day-col.today .col-day{color:#E9C88A}
-.day-col .col-tag{font-family:'Inter Tight';font-weight:600;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);background:#E9C88A;padding:5px 10px;border-radius:3px}
-.day-col .col-sub{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,231,.60);margin-bottom:28px}
-.day-col .row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(246,241,231,.10)}
-.day-col .row:last-child{border-bottom:0}
-.day-col .row .rn{font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,231,.65)}
-.day-col .row .rv{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:#F6F1E7;line-height:1}
-.day-col.today .row .rv{color:#E9C88A}
-.day-col .row .delta{display:block;font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.08em;margin-top:6px;text-align:right}
-.day-col .row .delta.up{color:#A8E4C6}
-.day-col .row .delta.dn{color:#F1B3B3}
-.day-col .row .delta.flat{color:rgba(246,241,231,.50)}
+/* 7-day grid: metric rows, day columns */
+.dgrid{margin-top:80px;overflow-x:auto}
+.dgrid table{width:100%;border-collapse:collapse;min-width:1240px}
+.dgrid th,.dgrid td{padding:26px 18px;text-align:center;border-bottom:1px solid rgba(246,241,231,.14);vertical-align:middle}
+.dgrid thead th{border-bottom:2px solid rgba(246,241,231,.35);padding-bottom:32px}
+.dgrid th.metric-h,.dgrid td.metric-h{text-align:left;font-family:'Inter Tight';font-weight:700;font-size:15px;letter-spacing:.20em;text-transform:uppercase;color:rgba(246,241,231,.85);width:200px;padding-left:0}
+.dgrid th.day{font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(246,241,231,.60);padding-bottom:6px}
+.dgrid th.day .dd{display:block;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:42px;color:#F6F1E7;letter-spacing:-.02em;margin-top:8px;line-height:1}
+.dgrid th.day.today{background:rgba(233,200,138,.10);border-top-left-radius:6px;border-top-right-radius:6px}
+.dgrid th.day.today .dd{color:#E9C88A}
+.dgrid th.day.today::after{content:'LIVE';display:block;font-family:'Inter Tight';font-weight:700;font-size:10px;letter-spacing:.28em;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin:10px auto 0;width:fit-content}
+.dgrid td.day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:36px;color:#F6F1E7;line-height:1}
+.dgrid td.day.today{background:rgba(233,200,138,.08);color:#E9C88A}
+.dgrid td.day .sub{display:block;font-family:'Inter Tight';font-style:normal;font-weight:500;font-size:11px;letter-spacing:.14em;color:rgba(246,241,231,.55);margin-top:6px;text-transform:uppercase}
+.dgrid td.day.best{color:#A8E4C6}
+.dgrid td.day.worst{color:#F1B3B3}
+.dgrid tr:last-child td{border-bottom:0}
 
-.avg-strip{margin-top:32px;padding:24px 40px;background:rgba(255,255,255,.03);border:1px solid rgba(246,241,231,.12);border-radius:8px;display:grid;grid-template-columns:auto repeat(6,1fr);gap:24px;align-items:center}
-.avg-strip .avg-lbl{font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,231,.60)}
-.avg-strip .avg-cell{text-align:center}
-.avg-strip .avg-cell .an{font-family:'Inter Tight';font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(246,241,231,.50);margin-bottom:4px}
-.avg-strip .avg-cell .av{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:22px;color:#F6F1E7}
+/* Final summary: yesterday vs today vs 7-day avg — 3 fat cards */
+.compare3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:100px}
+.c3-card{background:rgba(255,255,255,.04);border:1px solid rgba(246,241,231,.20);border-radius:10px;padding:48px 40px}
+.c3-card.today{background:rgba(233,200,138,.12);border-color:rgba(233,200,138,.60)}
+.c3-card.avg{background:rgba(255,255,255,.02);border-style:dashed}
+.c3-card .c3-hd{font-family:'Inter Tight';font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(246,241,231,.60);margin-bottom:10px}
+.c3-card.today .c3-hd{color:#E9C88A}
+.c3-card .c3-day{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:52px;color:#F6F1E7;letter-spacing:-.02em;margin-bottom:36px;line-height:1}
+.c3-card.today .c3-day{color:#E9C88A}
+.c3-card .c3-row{display:grid;grid-template-columns:1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid rgba(246,241,231,.10);align-items:baseline}
+.c3-card .c3-row:last-child{border-bottom:0}
+.c3-card .c3-rn{font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.20em;text-transform:uppercase;color:rgba(246,241,231,.65)}
+.c3-card .c3-rv{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:30px;color:#F6F1E7;line-height:1;text-align:right}
+.c3-card.today .c3-rv{color:#E9C88A}
 
-.pace-headline{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px;padding-top:48px;border-top:1px solid rgba(246,241,231,.20)}
+.compare-note{font-size:15px;color:rgba(246,241,231,.60);margin-top:20px;letter-spacing:.02em}
+
+.pace-headline{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:80px;padding-top:60px;border-top:1px solid rgba(246,241,231,.20)}
 .ph .p-lbl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:16px}
-.ph .p-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:72px;line-height:.95;letter-spacing:-.02em;color:#F6F1E7}
+.ph .p-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:80px;line-height:.95;letter-spacing:-.02em;color:#F6F1E7}
 .ph.warn .p-val{color:#F1B3B3}
 .ph.good .p-val{color:#A8E4C6}
 .ph .p-sub{font-size:15px;color:rgba(246,241,231,.75);margin-top:12px}
@@ -132,8 +143,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
   .stg .body{grid-template-columns:1fr;gap:24px}
   .stg .right{text-align:left}
   .daily-tbl{overflow-x:auto}
-  .sbs{grid-template-columns:1fr;gap:24px}
-  .avg-strip{grid-template-columns:1fr 1fr;gap:16px;padding:20px 24px}
+  .compare3{grid-template-columns:1fr;gap:24px}
   .pace-headline{grid-template-columns:1fr;gap:32px}
   footer{padding:60px 24px}
 }
@@ -151,12 +161,12 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
     <div class="kpi-row">
       <div class="kpi a">
         <div class="k-lbl">Spend, 7 days</div>
-        <div class="k-val">$2,419</div>
-        <div class="k-sub">$345.63 average per day</div>
+        <div class="k-val">$2,422</div>
+        <div class="k-sub">$345.99 average per day</div>
       </div>
       <div class="kpi b">
         <div class="k-lbl">Landing-page views</div>
-        <div class="k-val">1,883</div>
+        <div class="k-val">1,886</div>
         <div class="k-sub">89% of link clicks land</div>
       </div>
       <div class="kpi c">
@@ -166,7 +176,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
       </div>
       <div class="kpi d">
         <div class="k-lbl">Cost per purchase</div>
-        <div class="k-val">$1,210</div>
+        <div class="k-val">$1,211</div>
         <div class="k-sub">Break-even at $179 ticket: $179</div>
       </div>
     </div>
@@ -186,13 +196,13 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Reach · unique-per-day, summed</div>
-            <div class="num">94,159</div>
+            <div class="num">94,338</div>
             <span class="drop">Frequency 1.20× (impressions / reach)</span>
           </div>
           <div class="right">
             <div class="rlbl">Spend, 7 days</div>
-            <div class="rnum">$2,419.42</div>
-            <div class="rsub">$345.63 average per day</div>
+            <div class="rnum">$2,421.94</div>
+            <div class="rsub">$345.99 average per day</div>
           </div>
         </div>
       </div>
@@ -201,12 +211,12 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Impressions</div>
-            <div class="num">113,349</div>
+            <div class="num">113,535</div>
             <span class="drop">Total ad views served</span>
           </div>
           <div class="right">
             <div class="rlbl">CPM · cost per 1,000</div>
-            <div class="rnum">$21.35</div>
+            <div class="rnum">$21.33</div>
             <div class="rsub">Cold US traffic</div>
           </div>
         </div>
@@ -216,7 +226,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Link clicks</div>
-            <div class="num">2,115</div>
+            <div class="num">2,117</div>
             <span class="drop">Link CTR 1.87%</span>
           </div>
           <div class="right">
@@ -231,7 +241,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Landing-page views</div>
-            <div class="num">1,883</div>
+            <div class="num">1,886</div>
             <span class="drop">89% of link clicks land · 11% drop</span>
           </div>
           <div class="right">
@@ -251,7 +261,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
           </div>
           <div class="right">
             <div class="rlbl">Cost per sale</div>
-            <div class="rnum">$1,209.71</div>
+            <div class="rnum">$1,210.97</div>
             <div class="rsub">ROAS 0.15×</div>
           </div>
         </div>
@@ -280,10 +290,10 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
           <tr><td>Thu Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,562</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td>0</td></tr>
           <tr><td>Fri Sep 12</td><td class="big">$274.27</td><td class="big">15,748</td><td>13,817</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td>0</td></tr>
           <tr><td>Sat Sep 13</td><td class="big">$471.76</td><td class="big">25,740</td><td>20,054</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.38</td><td>1<span class="pill">sale</span></td></tr>
-          <tr><td>Sun Sep 14</td><td class="big">$392.82</td><td class="big">17,352</td><td>14,506</td><td>$22.64</td><td class="big">562</td><td>3.24%</td><td>$0.70</td><td class="big">520</td><td>$0.76</td><td>0<span class="pill">consolidated</span></td></tr>
-          <tr class="today"><td>Mon Sep 15</td><td class="big">$266.82</td><td class="big">14,577</td><td>13,549</td><td>$18.30</td><td class="big">367</td><td>2.52%</td><td>$0.73</td><td class="big">329</td><td>$0.81</td><td>0<span class="live">today</span></td></tr>
-          <tr class="avg"><td>Daily average</td><td>$345.63</td><td>16,193</td><td>13,451</td><td>$21.35</td><td>302</td><td>1.87%</td><td>$1.14</td><td>269</td><td>$1.28</td><td>0.29</td></tr>
-          <tr class="tot"><td>7-day total</td><td>$2,419.42</td><td>113,349</td><td>94,159</td><td>$21.35</td><td>2,115</td><td>1.87%</td><td>$1.14</td><td>1,883</td><td>$1.28</td><td>2</td></tr>
+          <tr><td>Sun Sep 14</td><td class="big">$392.84</td><td class="big">17,353</td><td>14,506</td><td>$22.64</td><td class="big">562</td><td>3.24%</td><td>$0.70</td><td class="big">520</td><td>$0.76</td><td>0<span class="pill">consolidated</span></td></tr>
+          <tr class="today"><td>Mon Sep 15</td><td class="big">$269.32</td><td class="big">14,762</td><td>13,728</td><td>$18.24</td><td class="big">369</td><td>2.50%</td><td>$0.73</td><td class="big">332</td><td>$0.81</td><td>0<span class="live">today</span></td></tr>
+          <tr class="avg"><td>Daily average</td><td>$345.99</td><td>16,219</td><td>13,477</td><td>$22.97</td><td>302</td><td>1.87%</td><td>$1.14</td><td>269</td><td>$1.28</td><td>0.29</td></tr>
+          <tr class="tot"><td>7-day total</td><td>$2,421.94</td><td>113,535</td><td>94,338</td><td>$21.33</td><td>2,117</td><td>1.87%</td><td>$1.14</td><td>1,886</td><td>$1.28</td><td>2</td></tr>
         </tbody>
       </table>
     </div>
@@ -293,66 +303,177 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
 <!-- COMPARE -->
 <section class="s-compare">
   <div class="wrap">
-    <div class="label">Today vs yesterday vs 7-day average · every metric</div>
-    <h2>Today,<br/><span class="serif italic" style="color:#E9C88A">side by side.</span></h2>
-    <p>Sep 15 is a partial day, pulled at 13:34 Israel time — approximately 9 hours into the US ad day, so raw counts are not directly comparable to Sep 14's full 24 hours. The "pace" row rescales today up to a full day at the current run-rate so the comparison is apples to apples. Green means better than yesterday, red means worse.</p>
+    <div class="label">Every metric · every day · Sep 9 → Sep 15 · side by side</div>
+    <h2>Seven days,<br/><span class="serif italic" style="color:#E9C88A">column by column.</span></h2>
+    <p>Every day of the ecommerce campaign, laid out as its own column. Read a row across to see how any single metric moved day to day. Sep 15 (today) is a partial day, pulled at 14:32 Israel time, ~10 hours into the US ad day. Green highlight = best day for that metric across the 7 days; red = worst.</p>
 
-    <div class="sbs">
-      <div class="day-col today">
-        <div class="col-hd">
-          <div class="col-day">Today</div>
-          <div class="col-tag">LIVE · partial</div>
-        </div>
-        <div class="col-sub">Mon Sep 15 · pulled 13:34 IDT · ~9h in</div>
+    <div class="dgrid">
+      <table>
+        <thead>
+          <tr>
+            <th class="metric-h">Metric</th>
+            <th class="day">Tue<span class="dd">Sep 9</span></th>
+            <th class="day">Wed<span class="dd">Sep 10</span></th>
+            <th class="day">Thu<span class="dd">Sep 11</span></th>
+            <th class="day">Fri<span class="dd">Sep 12</span></th>
+            <th class="day">Sat<span class="dd">Sep 13</span></th>
+            <th class="day">Sun<span class="dd">Sep 14</span></th>
+            <th class="day today">Mon<span class="dd">Sep 15</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="metric-h">Spend</td>
+            <td class="day">$393.75</td>
+            <td class="day">$369.34</td>
+            <td class="day worst">$250.66</td>
+            <td class="day">$274.27</td>
+            <td class="day best">$471.76</td>
+            <td class="day">$392.84</td>
+            <td class="day today">$269.32<span class="sub">partial · 10h in</span></td>
+          </tr>
+          <tr>
+            <td class="metric-h">Impressions</td>
+            <td class="day">11,951</td>
+            <td class="day">20,405</td>
+            <td class="day worst">7,576</td>
+            <td class="day">15,748</td>
+            <td class="day best">25,740</td>
+            <td class="day">17,353</td>
+            <td class="day today">14,762<span class="sub">partial</span></td>
+          </tr>
+          <tr>
+            <td class="metric-h">Reach</td>
+            <td class="day">9,247</td>
+            <td class="day">16,424</td>
+            <td class="day worst">6,562</td>
+            <td class="day">13,817</td>
+            <td class="day best">20,054</td>
+            <td class="day">14,506</td>
+            <td class="day today">13,728<span class="sub">partial</span></td>
+          </tr>
+          <tr>
+            <td class="metric-h">CPM</td>
+            <td class="day">$32.95</td>
+            <td class="day">$18.10</td>
+            <td class="day worst">$33.09</td>
+            <td class="day best">$17.42</td>
+            <td class="day">$18.33</td>
+            <td class="day">$22.64</td>
+            <td class="day today">$18.24</td>
+          </tr>
+          <tr>
+            <td class="metric-h">Link clicks</td>
+            <td class="day">184</td>
+            <td class="day">196</td>
+            <td class="day worst">76</td>
+            <td class="day">342</td>
+            <td class="day">388</td>
+            <td class="day best">562</td>
+            <td class="day today">369<span class="sub">partial</span></td>
+          </tr>
+          <tr>
+            <td class="metric-h">Link CTR</td>
+            <td class="day">1.54%</td>
+            <td class="day worst">0.96%</td>
+            <td class="day">1.00%</td>
+            <td class="day">2.17%</td>
+            <td class="day">1.51%</td>
+            <td class="day best">3.24%</td>
+            <td class="day today">2.50%</td>
+          </tr>
+          <tr>
+            <td class="metric-h">CPC (link)</td>
+            <td class="day">$2.14</td>
+            <td class="day">$1.88</td>
+            <td class="day worst">$3.30</td>
+            <td class="day">$0.80</td>
+            <td class="day">$1.22</td>
+            <td class="day">$0.70</td>
+            <td class="day today best">$0.73</td>
+          </tr>
+          <tr>
+            <td class="metric-h">Landing-page views</td>
+            <td class="day">160</td>
+            <td class="day">157</td>
+            <td class="day worst">65</td>
+            <td class="day">309</td>
+            <td class="day">343</td>
+            <td class="day best">520</td>
+            <td class="day today">332<span class="sub">partial</span></td>
+          </tr>
+          <tr>
+            <td class="metric-h">Cost per LPV</td>
+            <td class="day">$2.46</td>
+            <td class="day">$2.35</td>
+            <td class="day worst">$3.86</td>
+            <td class="day">$0.89</td>
+            <td class="day">$1.38</td>
+            <td class="day best">$0.76</td>
+            <td class="day today">$0.81</td>
+          </tr>
+          <tr>
+            <td class="metric-h">Purchases</td>
+            <td class="day worst">0</td>
+            <td class="day best">1</td>
+            <td class="day worst">0</td>
+            <td class="day worst">0</td>
+            <td class="day best">1</td>
+            <td class="day worst">0</td>
+            <td class="day today worst">0<span class="sub">so far</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="compare-note">Green = best day of the 7 for that metric. Red = worst. Sep 15 numbers pulled 14:32 IDT · approximately 10 hours into the US ad day.</div>
 
-        <div class="row"><div class="rn">Spend</div><div><div class="rv">$266.82</div><div class="delta dn">−32.1% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">Impressions</div><div><div class="rv">14,577</div><div class="delta dn">−16.0% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">Reach</div><div><div class="rv">13,549</div><div class="delta dn">−6.6% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">CPM</div><div><div class="rv">$18.30</div><div class="delta up">19.2% cheaper</div></div></div>
-        <div class="row"><div class="rn">Link clicks</div><div><div class="rv">367</div><div class="delta dn">−34.7% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">Link CTR</div><div><div class="rv">2.52%</div><div class="delta dn">−22.2% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">CPC (link)</div><div><div class="rv">$0.73</div><div class="delta dn">+4.3% more expensive</div></div></div>
-        <div class="row"><div class="rn">Landing-page views</div><div><div class="rv">329</div><div class="delta dn">−36.7% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">LPV rate</div><div><div class="rv">89.6%</div><div class="delta dn">−3.1% vs yesterday</div></div></div>
-        <div class="row"><div class="rn">Cost per LPV</div><div><div class="rv">$0.81</div><div class="delta dn">+6.6% more expensive</div></div></div>
-        <div class="row"><div class="rn">Frequency</div><div><div class="rv">1.08×</div><div class="delta up">10% fresher</div></div></div>
-        <div class="row"><div class="rn">Purchases</div><div><div class="rv">0</div><div class="delta flat">Same · 0</div></div></div>
-        <div class="row"><div class="rn">Full-day pace</div><div><div class="rv">~$711 · ~877 LPV</div><div class="delta up">+81% spend · +69% LPV projected</div></div></div>
+    <!-- FINAL 3-CARD SUMMARY -->
+    <div class="compare3">
+      <div class="c3-card">
+        <div class="c3-hd">Yesterday</div>
+        <div class="c3-day">Sun Sep 14</div>
+        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$392.84</div></div>
+        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">17,353</div></div>
+        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">14,506</div></div>
+        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$22.64</div></div>
+        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">562</div></div>
+        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">3.24%</div></div>
+        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$0.70</div></div>
+        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">520</div></div>
+        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$0.76</div></div>
+        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div>
       </div>
 
-      <div class="day-col">
-        <div class="col-hd">
-          <div class="col-day">Yesterday</div>
-          <div class="col-tag" style="background:rgba(246,241,231,.20);color:#F6F1E7">FULL DAY</div>
-        </div>
-        <div class="col-sub">Sun Sep 14 · consolidation day · 2 adsets → 1</div>
+      <div class="c3-card today">
+        <div class="c3-hd">Today · LIVE · pulled 14:32 IDT</div>
+        <div class="c3-day">Mon Sep 15</div>
+        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$269.32</div></div>
+        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">14,762</div></div>
+        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">13,728</div></div>
+        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$18.24</div></div>
+        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">369</div></div>
+        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">2.50%</div></div>
+        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$0.73</div></div>
+        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">332</div></div>
+        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$0.81</div></div>
+        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0</div></div>
+      </div>
 
-        <div class="row"><div class="rn">Spend</div><div><div class="rv">$392.82</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">Impressions</div><div><div class="rv">17,352</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">Reach</div><div><div class="rv">14,506</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">CPM</div><div><div class="rv">$22.64</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">Link clicks</div><div><div class="rv">562</div><div class="delta flat">baseline · best day</div></div></div>
-        <div class="row"><div class="rn">Link CTR</div><div><div class="rv">3.24%</div><div class="delta flat">baseline · best day</div></div></div>
-        <div class="row"><div class="rn">CPC (link)</div><div><div class="rv">$0.70</div><div class="delta flat">baseline · best day</div></div></div>
-        <div class="row"><div class="rn">Landing-page views</div><div><div class="rv">520</div><div class="delta flat">baseline · best day</div></div></div>
-        <div class="row"><div class="rn">LPV rate</div><div><div class="rv">92.5%</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">Cost per LPV</div><div><div class="rv">$0.76</div><div class="delta flat">baseline · best day</div></div></div>
-        <div class="row"><div class="rn">Frequency</div><div><div class="rv">1.20×</div><div class="delta flat">baseline</div></div></div>
-        <div class="row"><div class="rn">Purchases</div><div><div class="rv">0</div><div class="delta flat">zero</div></div></div>
-        <div class="row"><div class="rn">Full-day pace</div><div><div class="rv">$392.82 · 520 LPV</div><div class="delta flat">actual</div></div></div>
+      <div class="c3-card avg">
+        <div class="c3-hd">7-day daily average · Sep 9–15</div>
+        <div class="c3-day">Baseline</div>
+        <div class="c3-row"><div class="c3-rn">Spend</div><div class="c3-rv">$345.99</div></div>
+        <div class="c3-row"><div class="c3-rn">Impressions</div><div class="c3-rv">16,219</div></div>
+        <div class="c3-row"><div class="c3-rn">Reach</div><div class="c3-rv">13,477</div></div>
+        <div class="c3-row"><div class="c3-rn">CPM</div><div class="c3-rv">$22.97</div></div>
+        <div class="c3-row"><div class="c3-rn">Link clicks</div><div class="c3-rv">302</div></div>
+        <div class="c3-row"><div class="c3-rn">Link CTR</div><div class="c3-rv">1.87%</div></div>
+        <div class="c3-row"><div class="c3-rn">CPC (link)</div><div class="c3-rv">$1.54</div></div>
+        <div class="c3-row"><div class="c3-rn">Landing-page views</div><div class="c3-rv">269</div></div>
+        <div class="c3-row"><div class="c3-rn">Cost per LPV</div><div class="c3-rv">$1.79</div></div>
+        <div class="c3-row"><div class="c3-rn">Purchases</div><div class="c3-rv">0.29</div></div>
       </div>
     </div>
-
-    <div class="avg-strip">
-      <div class="avg-lbl">7-day daily average</div>
-      <div class="avg-cell"><div class="an">Spend</div><div class="av">$345.63</div></div>
-      <div class="avg-cell"><div class="an">Impressions</div><div class="av">16,193</div></div>
-      <div class="avg-cell"><div class="an">Link CTR</div><div class="av">1.87%</div></div>
-      <div class="avg-cell"><div class="an">LPV</div><div class="av">269</div></div>
-      <div class="avg-cell"><div class="an">Cost / LPV</div><div class="av">$1.28</div></div>
-      <div class="avg-cell"><div class="an">Purchases</div><div class="av">0.29</div></div>
-    </div>
-    <div class="compare-note">Full-day pace on today = current numbers × (24 ÷ 9). Real end-of-day may swing ±20% depending on evening budget throttle and US primetime pickup. Green = better than yesterday, red = worse.</div>
 
     <div class="pace-headline">
       <div class="ph good">
