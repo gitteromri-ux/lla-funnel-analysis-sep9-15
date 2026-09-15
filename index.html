@@ -85,6 +85,35 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:900px;margin-bottom:24p
 .daily-tbl .pill{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--sage);padding:4px 10px;border-radius:4px;margin-left:8px}
 .daily-tbl .live{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin-left:8px}
 
+/* COMPARE — today vs yesterday vs 7-day avg */
+.s-compare{background:var(--sea);color:#F6F1E7}
+.s-compare h2,.s-compare h3{color:#F6F1E7}
+.s-compare p,.s-compare .lede{color:rgba(246,241,231,.85)}
+.s-compare .label{color:#E9C88A}
+.compare-note{font-size:16px;color:rgba(246,241,231,.65);margin-top:12px;letter-spacing:.02em}
+.cmp-tbl{margin-top:60px}
+.cmp-tbl table{width:100%;border-collapse:collapse}
+.cmp-tbl th,.cmp-tbl td{text-align:right;padding:22px 18px;font-family:'Inter Tight';font-weight:500;font-size:20px;color:#F6F1E7;border-bottom:1px solid rgba(246,241,231,.14)}
+.cmp-tbl th{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;font-weight:600;padding-bottom:20px;border-bottom:1px solid rgba(246,241,231,.30)}
+.cmp-tbl th:first-child,.cmp-tbl td:first-child{text-align:left;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:24px}
+.cmp-tbl td.metric-lbl{font-family:'Inter Tight';font-style:normal;font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:rgba(246,241,231,.75)}
+.cmp-tbl td.num-today{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:34px;color:#E9C88A}
+.cmp-tbl td.num-y{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:28px;color:#F6F1E7}
+.cmp-tbl td.num-avg{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:24px;color:rgba(246,241,231,.75)}
+.cmp-tbl .up{color:#A8E4C6;font-weight:600;font-size:16px;letter-spacing:.04em}
+.cmp-tbl .dn{color:#F1B3B3;font-weight:600;font-size:16px;letter-spacing:.04em}
+.cmp-tbl .flat{color:rgba(246,241,231,.55);font-weight:600;font-size:16px;letter-spacing:.04em}
+.cmp-tbl td.delta{font-family:'Inter Tight';font-weight:600;font-size:16px;letter-spacing:.04em}
+.cmp-tbl tr.pace td{background:rgba(233,200,138,.10);border-top:2px solid rgba(233,200,138,.35);border-bottom:2px solid rgba(233,200,138,.35)}
+.cmp-tbl tr.pace td:first-child{color:#E9C88A;font-family:'Inter Tight';font-style:normal;font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:14px}
+.pace-headline{display:grid;grid-template-columns:repeat(3,1fr);gap:56px;margin-top:60px;padding-top:48px;border-top:1px solid rgba(246,241,231,.20)}
+.ph{}
+.ph .p-lbl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:16px}
+.ph .p-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:84px;line-height:.95;letter-spacing:-.02em;color:#F6F1E7}
+.ph.warn .p-val{color:#F1B3B3}
+.ph.good .p-val{color:#A8E4C6}
+.ph .p-sub{font-size:15px;color:rgba(246,241,231,.72);margin-top:12px}
+
 footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font-size:14px;letter-spacing:.02em;text-align:center}
 
 @media (max-width:1100px){
@@ -94,6 +123,8 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
   .stg .body{grid-template-columns:1fr;gap:24px}
   .stg .right{text-align:left}
   .daily-tbl{overflow-x:auto}
+  .cmp-tbl{overflow-x:auto}
+  .pace-headline{grid-template-columns:1fr;gap:32px}
   footer{padding:60px 24px}
 }
 </style>
@@ -249,8 +280,155 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
   </div>
 </section>
 
+<!-- COMPARE -->
+<section class="s-compare">
+  <div class="wrap">
+    <div class="label">Today vs yesterday vs 7-day average · every metric</div>
+    <h2>Today,<br/><span class="serif italic" style="color:#E9C88A">side by side.</span></h2>
+    <p>Sep 15 is a partial day, pulled at 13:34 Israel time — approximately 9 hours into the US ad day, so raw counts are not directly comparable to Sep 14's full 24 hours. The "pace" row rescales today up to a full day at the current run-rate so the comparison is apples to apples. Green means better than yesterday, red means worse.</p>
+
+    <div class="cmp-tbl">
+      <table>
+        <thead><tr>
+          <th>Metric</th>
+          <th>Today · Mon Sep 15 (partial)</th>
+          <th>Yesterday · Sun Sep 14</th>
+          <th>Today vs yesterday</th>
+          <th>7-day daily avg</th>
+          <th>Today vs avg</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="metric-lbl">Spend</td>
+            <td class="num-today">$266.82</td>
+            <td class="num-y">$392.82</td>
+            <td class="delta dn">−32.1%</td>
+            <td class="num-avg">$345.63</td>
+            <td class="delta dn">−22.8%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Impressions</td>
+            <td class="num-today">14,577</td>
+            <td class="num-y">17,352</td>
+            <td class="delta dn">−16.0%</td>
+            <td class="num-avg">16,193</td>
+            <td class="delta dn">−10.0%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Reach</td>
+            <td class="num-today">13,549</td>
+            <td class="num-y">14,506</td>
+            <td class="delta dn">−6.6%</td>
+            <td class="num-avg">13,451</td>
+            <td class="delta up">+0.7%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">CPM</td>
+            <td class="num-today">$18.30</td>
+            <td class="num-y">$22.64</td>
+            <td class="delta up">−19.2% cheaper</td>
+            <td class="num-avg">$21.35</td>
+            <td class="delta up">−14.3% cheaper</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Link clicks</td>
+            <td class="num-today">367</td>
+            <td class="num-y">562</td>
+            <td class="delta dn">−34.7%</td>
+            <td class="num-avg">302</td>
+            <td class="delta up">+21.5%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Link CTR</td>
+            <td class="num-today">2.52%</td>
+            <td class="num-y">3.24%</td>
+            <td class="delta dn">−22.2%</td>
+            <td class="num-avg">1.87%</td>
+            <td class="delta up">+34.8%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">CPC (link)</td>
+            <td class="num-today">$0.73</td>
+            <td class="num-y">$0.70</td>
+            <td class="delta dn">+4.3% more expensive</td>
+            <td class="num-avg">$1.14</td>
+            <td class="delta up">−36.0% cheaper</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Landing-page views</td>
+            <td class="num-today">329</td>
+            <td class="num-y">520</td>
+            <td class="delta dn">−36.7%</td>
+            <td class="num-avg">269</td>
+            <td class="delta up">+22.3%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">LPV rate (LPV ÷ clicks)</td>
+            <td class="num-today">89.6%</td>
+            <td class="num-y">92.5%</td>
+            <td class="delta dn">−3.1%</td>
+            <td class="num-avg">89.0%</td>
+            <td class="delta up">+0.7%</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Cost per LPV</td>
+            <td class="num-today">$0.81</td>
+            <td class="num-y">$0.76</td>
+            <td class="delta dn">+6.6% more expensive</td>
+            <td class="num-avg">$1.28</td>
+            <td class="delta up">−36.7% cheaper</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Purchases</td>
+            <td class="num-today">0</td>
+            <td class="num-y">0</td>
+            <td class="delta flat">Same · 0</td>
+            <td class="num-avg">0.29</td>
+            <td class="delta dn">Behind pace</td>
+          </tr>
+          <tr>
+            <td class="metric-lbl">Frequency</td>
+            <td class="num-today">1.08×</td>
+            <td class="num-y">1.20×</td>
+            <td class="delta up">−10.0% fresher</td>
+            <td class="num-avg">1.20×</td>
+            <td class="delta up">−10.0% fresher</td>
+          </tr>
+          <tr class="pace">
+            <td>Full-day pace</td>
+            <td class="num-today">Spend ~$711 · LPV ~877</td>
+            <td class="num-y">Spend $392.82 · LPV 520</td>
+            <td class="delta up">+81% spend · +69% LPV projected</td>
+            <td class="num-avg">Spend $345.63 · LPV 269</td>
+            <td class="delta up">+106% spend · +226% LPV projected</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="compare-note">Full-day pace assumes constant delivery — today's numbers × (24 ÷ 9). Real end-of-day may swing ±20% depending on evening budget throttle and US primetime pickup.</div>
+
+    <div class="pace-headline">
+      <div class="ph good">
+        <div class="p-lbl">Traffic quality vs yesterday</div>
+        <div class="p-val">Better</div>
+        <div class="p-sub">CPM 19% cheaper, frequency 10% fresher, LPV rate flat at 90%. Ad delivery is not the problem today.</div>
+      </div>
+      <div class="ph warn">
+        <div class="p-lbl">Click engagement vs yesterday</div>
+        <div class="p-val">Softer</div>
+        <div class="p-sub">Link CTR 2.52% vs 3.24% yesterday — down 22%. Same creatives, same consolidated adset. Weekday vs Sunday effect likely; watch tonight.</div>
+      </div>
+      <div class="ph warn">
+        <div class="p-lbl">Conversions vs yesterday</div>
+        <div class="p-val">Zero</div>
+        <div class="p-sub">0 sales today so far, 0 yesterday. Same two-day dry spell. Traffic is landing, checkout is not converting.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads API, campaign LGV_EN_PPC_ecomm-01_2026-09-02_#118148, Sep 9 to Sep 15, 2026. All active ecommerce ad sets. Sep 14: consolidation of ecomm Adset 1 into ecomm Adset 2. Sep 15 partial — day still delivering at time of pull.
+  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads API, campaign LGV_EN_PPC_ecomm-01_2026-09-02_#118148, Sep 9 to Sep 15, 2026. All active ecommerce ad sets. Sep 14: consolidation of ecomm Adset 1 into ecomm Adset 2. Sep 15 partial · pulled 13:34 IDT · approximately 9 hours into the US ad day.
 </footer>
 
 </body>
