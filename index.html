@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>LLA · Ecommerce Funnel · Sep 9 to 14, 2026</title>
+<title>LLA · Ecommerce Funnel · Sep 9 to Sep 15, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400;1,500;1,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,44 +29,21 @@ html,body{background:var(--cream);color:var(--ink);font-family:'Inter Tight',sys
 .italic{font-style:italic}
 .thin{font-weight:300}
 
-/* section rhythm */
 section{padding:140px 0;border-top:1px solid rgba(14,17,22,.10)}
 section:first-of-type{border-top:0;padding-top:0}
 
-/* labels */
 .label{font-family:'Inter Tight';font-weight:500;font-size:14px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:40px}
 
-/* headlines */
 h1{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:clamp(64px,8vw,132px);line-height:1.02;letter-spacing:-.02em;margin-bottom:56px}
 h2{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:clamp(52px,6vw,96px);line-height:1.04;letter-spacing:-.02em;margin-bottom:48px}
 h3{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-.01em;margin-bottom:24px}
-.lede{font-size:26px;line-height:1.55;font-weight:400;color:#3A3F48;max-width:820px;margin-bottom:80px}
-p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:780px;margin-bottom:24px}
+.lede{font-size:26px;line-height:1.55;font-weight:400;color:#3A3F48;max-width:900px;margin-bottom:80px}
+p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:900px;margin-bottom:24px}
 
-/* hero — cream ground */
 .hero{background:var(--cream)}
-
-/* section grounds — each different */
 .s-funnel{background:var(--paper)}
 .s-daily{background:var(--sand)}
-.s-plan{background:var(--sea);color:#F6F1E7}
-.s-plan h2,.s-plan h3{color:#F6F1E7}
-.s-plan p,.s-plan .lede{color:rgba(246,241,231,.85)}
-.s-plan .label{color:#E9C88A}
-.s-scenario{background:var(--plum);color:#F6F1E7}
-.s-scenario h2{color:#F6F1E7}
-.s-scenario p,.s-scenario .lede{color:rgba(246,241,231,.82)}
-.s-scenario .label{color:#E9C88A}
-.s-levers{background:var(--forest);color:#F6F1E7}
-.s-levers h2,.s-levers h3{color:#F6F1E7}
-.s-levers p,.s-levers .lede{color:rgba(246,241,231,.85)}
-.s-levers .label{color:#E9C88A}
-.s-bottom{background:var(--wine);color:#F6F1E7}
-.s-bottom h2{color:#F6F1E7}
-.s-bottom p,.s-bottom .lede{color:rgba(246,241,231,.85)}
-.s-bottom .label{color:#E9C88A}
 
-/* KPI ROW under hero */
 .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:56px;margin-top:100px;border-top:1px solid rgba(14,17,22,.14);padding-top:56px}
 .kpi .k-lbl{font-family:'Inter Tight';font-weight:500;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#6A7079;margin-bottom:18px}
 .kpi .k-val{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:88px;line-height:.95;letter-spacing:-.02em;color:var(--ink)}
@@ -76,7 +53,6 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:780px;margin-bottom:24p
 .kpi.d .k-val{color:var(--wine)}
 .kpi .k-sub{font-size:16px;color:#6A7079;margin-top:14px;letter-spacing:.02em}
 
-/* PYRAMID — pure typography, no boxes */
 .pyramid{margin-top:40px}
 .stg{display:grid;grid-template-columns:auto 1fr;gap:80px;align-items:baseline;padding:56px 0;border-bottom:1px solid rgba(14,17,22,.10)}
 .stg:last-child{border-bottom:0}
@@ -95,62 +71,19 @@ p{font-size:22px;line-height:1.6;color:#2A2F38;max-width:780px;margin-bottom:24p
 .stg .right .rsub{font-size:16px;color:#6A7079;margin-top:10px}
 .stg .drop{font-family:'Inter Tight';font-weight:500;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);margin-top:20px;display:block}
 
-/* DAILY — pared table */
 .daily-tbl{margin-top:40px;background:transparent}
 .daily-tbl table{width:100%;border-collapse:collapse}
 .daily-tbl th,.daily-tbl td{text-align:right;padding:26px 20px;font-family:'Inter Tight';font-weight:500;font-size:20px;color:var(--ink);border-bottom:1px solid rgba(14,17,22,.10)}
 .daily-tbl th{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#6A7079;font-weight:600;padding-bottom:20px}
 .daily-tbl th:first-child,.daily-tbl td:first-child{text-align:left;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:26px}
 .daily-tbl td.big{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--ink)}
+.daily-tbl tr.today td{background:rgba(184,137,74,.10)}
 .daily-tbl tr.avg td{background:transparent;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding-top:32px;padding-bottom:32px;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--sea)}
 .daily-tbl tr.avg td:first-child{font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--sea);font-family:'Inter Tight';font-weight:600;font-style:normal}
 .daily-tbl tr.tot td{background:transparent;font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:32px;color:var(--gold);padding-top:32px}
 .daily-tbl tr.tot td:first-child{font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-family:'Inter Tight';font-weight:600;font-style:normal}
 .daily-tbl .pill{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--sage);padding:4px 10px;border-radius:4px;margin-left:8px}
-
-/* WEEKLY PLAN — big blocks */
-.plan-note{background:rgba(255,255,255,.06);border:1px solid rgba(233,200,138,.35);padding:28px 32px;border-radius:6px;margin-bottom:56px;max-width:900px}
-.plan-note .n-lbl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:10px}
-.plan-note .n-txt{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:28px;line-height:1.35;color:#F6F1E7}
-.plan-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:40px;border-top:1px solid rgba(246,241,231,.20);border-bottom:1px solid rgba(246,241,231,.20)}
-.pcard{padding:40px 20px 40px;border-right:1px solid rgba(246,241,231,.14);position:relative}
-.pcard:last-child{border-right:0}
-.pcard .pd{font-family:'Inter Tight';font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:16px}
-.pcard .pb{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:64px;line-height:1;letter-spacing:-.02em;color:#F6F1E7;margin-bottom:28px}
-.pcard .pr{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;font-size:14px;color:rgba(246,241,231,.72);border-top:1px solid rgba(246,241,231,.14)}
-.pcard .pr b{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:22px;color:#F6F1E7}
-.pcard.today{background:rgba(233,200,138,.10)}
-.pcard.today .pd{color:#F6F1E7}
-.pcard.today::before{content:"LIVE";position:absolute;top:14px;right:14px;font-family:'Inter Tight';font-weight:600;font-size:10px;letter-spacing:.24em;color:var(--ink);background:#E9C88A;padding:4px 8px;border-radius:3px}
-
-/* Callout under plan */
-.big-projection{margin-top:100px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:80px;padding-top:60px;border-top:1px solid rgba(246,241,231,.20)}
-.big-projection .bp .bl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:16px}
-.big-projection .bp .bv{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:104px;line-height:.9;letter-spacing:-.02em;color:#F6F1E7}
-.big-projection .bp .bs{font-size:16px;color:rgba(246,241,231,.72);margin-top:16px}
-
-/* SCENARIOS — plum */
-.scn-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:60px;border-top:1px solid rgba(246,241,231,.22);border-bottom:1px solid rgba(246,241,231,.22)}
-.scn{padding:56px 24px;text-align:center;border-right:1px solid rgba(246,241,231,.14)}
-.scn:last-child{border-right:0}
-.scn .cv{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#E9C88A;margin-bottom:24px}
-.scn .sl{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:88px;line-height:.9;letter-spacing:-.02em;color:#F6F1E7;margin-bottom:16px}
-.scn .cps{font-size:15px;color:rgba(246,241,231,.72);letter-spacing:.04em}
-.scn.miss{background:rgba(122,31,43,.35)}
-.scn.miss .sl{color:#E9C88A}
-.scn.target{background:rgba(184,137,74,.20)}
-.scn.target .sl{color:#F6F1E7}
-.scn.win .sl{color:#A8E4C6}
-
-/* LEVERS */
-.levers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:80px;margin-top:60px}
-.lever .lbl{font-family:'Inter Tight';font-weight:500;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#E9C88A;margin-bottom:20px}
-.lever h3{margin-bottom:24px}
-.lever .up{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:88px;line-height:.9;color:#E9C88A;margin-bottom:32px;letter-spacing:-.02em}
-.lever p{color:rgba(246,241,231,.85);font-size:19px}
-
-/* BOTTOM */
-.bottom-num{font-family:'Playfair Display';font-style:italic;font-weight:300;font-size:180px;line-height:.9;letter-spacing:-.03em;color:#E9C88A;margin:40px 0 32px}
+.daily-tbl .live{display:inline-block;font-family:'Inter Tight';font-weight:600;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);background:#E9C88A;padding:3px 8px;border-radius:3px;margin-left:8px}
 
 footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font-size:14px;letter-spacing:.02em;text-align:center}
 
@@ -160,10 +93,6 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
   .stg{grid-template-columns:1fr;gap:20px}
   .stg .body{grid-template-columns:1fr;gap:24px}
   .stg .right{text-align:left}
-  .plan-grid{grid-template-columns:1fr 1fr}
-  .scn-grid{grid-template-columns:1fr 1fr}
-  .levers-grid{grid-template-columns:1fr;gap:60px}
-  .big-projection{grid-template-columns:1fr;gap:40px}
   .daily-tbl{overflow-x:auto}
   footer{padding:60px 24px}
 }
@@ -174,20 +103,20 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="label">Longevity Life Academy · Meta ecommerce funnel · Sep 9 to Sep 14, 2026</div>
-    <h1>A <span class="serif italic">honest</span><br/>read of the<br/>funnel, and the<br/>path to <span style="color:var(--wine)">five sales.</span></h1>
-    <p class="lede">Six days of live delivery. Ninety thousand impressions. Twelve hundred landing-page views. Two purchases at one hundred and seventy-nine dollars. This page reads the funnel end to end, from cost per thousand impressions down to cost per sale, then models what the next seven days need to deliver five.</p>
+    <div class="label">Longevity Life Academy · Meta ecommerce funnel · Sep 9 to Sep 15, 2026</div>
+    <h1>Seven days<br/>of the <span class="serif italic">funnel,</span><br/>day by day.</h1>
+    <p class="lede">Seven days of live delivery on the ecommerce campaign (LGV_EN_PPC_ecomm-01_2026-09-02_#118148). Every metric aggregated across every active ecommerce ad set, day by day. Sep 14 includes the two-adset consolidation into ecomm Adset 2. Sep 15 is today, still delivering.</p>
 
     <div class="kpi-row">
       <div class="kpi a">
-        <div class="k-lbl">Spend, 6 days</div>
-        <div class="k-val">$1,924</div>
-        <div class="k-sub">$320.79 average per day</div>
+        <div class="k-lbl">Spend, 7 days</div>
+        <div class="k-val">$2,419</div>
+        <div class="k-sub">$345.63 average per day</div>
       </div>
       <div class="kpi b">
         <div class="k-lbl">Landing-page views</div>
-        <div class="k-val">1,268</div>
-        <div class="k-sub">88% of link clicks land</div>
+        <div class="k-val">1,883</div>
+        <div class="k-sub">89% of link clicks land</div>
       </div>
       <div class="kpi c">
         <div class="k-lbl">Purchases</div>
@@ -196,7 +125,7 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
       </div>
       <div class="kpi d">
         <div class="k-lbl">Cost per purchase</div>
-        <div class="k-val">$962</div>
+        <div class="k-val">$1,210</div>
         <div class="k-sub">Break-even at $179 ticket: $179</div>
       </div>
     </div>
@@ -206,23 +135,23 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
 <!-- FUNNEL PYRAMID -->
 <section class="s-funnel">
   <div class="wrap">
-    <div class="label">The funnel, drawn to scale</div>
+    <div class="label">The funnel, drawn to scale · 7-day totals</div>
     <h2>Every stage.<br/>Every drop-off.<br/><span style="color:var(--wine)">Every dollar.</span></h2>
-    <p>Five stages, top to bottom. The number on the left is the raw count. The number on the right is the unit economics for that step. The gap between stage four and stage five is where the money is being lost, and where the week is decided.</p>
+    <p>Five stages, top to bottom. The number on the left is the raw count. The number on the right is the unit economics for that step.</p>
 
     <div class="pyramid">
       <div class="stg a">
         <div class="roman">i</div>
         <div class="body">
           <div>
-            <div class="name">Reach · unique people</div>
-            <div class="num">75,491</div>
-            <span class="drop">Frequency 1.19×</span>
+            <div class="name">Reach · unique-per-day, summed</div>
+            <div class="num">94,159</div>
+            <span class="drop">Frequency 1.20× (impressions / reach)</span>
           </div>
           <div class="right">
-            <div class="rlbl">Spend, 6 days</div>
-            <div class="rnum">$1,924.72</div>
-            <div class="rsub">$320.79 average per day</div>
+            <div class="rlbl">Spend, 7 days</div>
+            <div class="rnum">$2,419.42</div>
+            <div class="rsub">$345.63 average per day</div>
           </div>
         </div>
       </div>
@@ -231,13 +160,13 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Impressions</div>
-            <div class="num">89,896</div>
+            <div class="num">113,349</div>
             <span class="drop">Total ad views served</span>
           </div>
           <div class="right">
             <div class="rlbl">CPM · cost per 1,000</div>
-            <div class="rnum">$21.41</div>
-            <div class="rsub">Reasonable for cold US traffic</div>
+            <div class="rnum">$21.35</div>
+            <div class="rsub">Cold US traffic</div>
           </div>
         </div>
       </div>
@@ -246,12 +175,12 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Link clicks</div>
-            <div class="num">1,444</div>
-            <span class="drop">CTR 1.61%</span>
+            <div class="num">2,115</div>
+            <span class="drop">Link CTR 1.87%</span>
           </div>
           <div class="right">
             <div class="rlbl">CPC · link click</div>
-            <div class="rnum">$1.33</div>
+            <div class="rnum">$1.14</div>
             <div class="rsub">CPC all clicks $0.13</div>
           </div>
         </div>
@@ -261,13 +190,13 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
         <div class="body">
           <div>
             <div class="name">Landing-page views</div>
-            <div class="num">1,268</div>
-            <span class="drop">88% of clicks land · 12% drop</span>
+            <div class="num">1,883</div>
+            <span class="drop">89% of link clicks land · 11% drop</span>
           </div>
           <div class="right">
             <div class="rlbl">Cost per LPV</div>
-            <div class="rnum">$1.52</div>
-            <div class="rsub">Healthy for cold traffic</div>
+            <div class="rnum">$1.28</div>
+            <div class="rsub">Fell 67% from Sep 11 peak</div>
           </div>
         </div>
       </div>
@@ -277,12 +206,12 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
           <div>
             <div class="name">Purchases</div>
             <div class="num">2</div>
-            <span class="drop">CVR 0.16% of LPV · this is the bottleneck</span>
+            <span class="drop">CVR 0.11% of LPV</span>
           </div>
           <div class="right">
             <div class="rlbl">Cost per sale</div>
-            <div class="rnum">$962.36</div>
-            <div class="rsub">ROAS 0.19×</div>
+            <div class="rnum">$1,209.71</div>
+            <div class="rsub">ROAS 0.15×</div>
           </div>
         </div>
       </div>
@@ -293,184 +222,35 @@ footer{padding:80px 140px;background:var(--ink);color:rgba(246,241,231,.60);font
 <!-- DAILY -->
 <section class="s-daily">
   <div class="wrap">
-    <div class="label">Day by day · every metric</div>
-    <h2>Six days<br/>of <span style="color:var(--wine)">truth.</span></h2>
-    <p>Aggregated across every active ad set. The average row is the baseline used to model the week ahead. Notice Sep 12 to Sep 14: cost per landing-page view fell from $2.35 to $0.71 as the funnel above checkout finally started working.</p>
+    <div class="label">Day by day · every metric · Sep 9 to Sep 15</div>
+    <h2>Seven days<br/>of <span style="color:var(--wine)">truth.</span></h2>
+    <p>Aggregated across every active ecommerce ad set. Sep 14 is the day the two adsets consolidated into ecomm Adset 2. Sep 15 is today, still live.</p>
 
     <div class="daily-tbl">
       <table>
         <thead><tr>
           <th>Date</th><th>Spend</th><th>Impressions</th><th>Reach</th><th>CPM</th>
-          <th>Link clicks</th><th>CTR</th><th>CPC</th>
+          <th>Link clicks</th><th>Link CTR</th><th>CPC</th>
           <th>LPV</th><th>Cost / LPV</th><th>Purch.</th>
         </tr></thead>
         <tbody>
-          <tr><td>Tue Sep 9</td><td class="big">$393.75</td><td class="big">11,951</td><td>9,612</td><td>$32.95</td><td class="big">184</td><td>1.54%</td><td>$2.14</td><td class="big">160</td><td>$2.46</td><td>0</td></tr>
-          <tr><td>Wed Sep 10</td><td class="big">$369.34</td><td class="big">20,405</td><td>17,128</td><td>$18.10</td><td class="big">196</td><td>0.96%</td><td>$1.88</td><td class="big">157</td><td>$2.35</td><td>1<span class="pill">sale</span></td></tr>
-          <tr><td>Thu Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,688</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td>0</td></tr>
-          <tr><td>Fri Sep 12</td><td class="big">$274.26</td><td class="big">15,747</td><td>14,051</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td>0</td></tr>
-          <tr><td>Sat Sep 13</td><td class="big">$471.54</td><td class="big">25,727</td><td>20,499</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.37</td><td>1<span class="pill">sale</span></td></tr>
-          <tr><td>Sun Sep 14</td><td class="big">$165.17</td><td class="big">8,490</td><td>7,513</td><td>$19.45</td><td class="big">258</td><td>3.04%</td><td>$0.64</td><td class="big">234</td><td>$0.71</td><td>0</td></tr>
-          <tr class="avg"><td>Daily average</td><td>$320.79</td><td>14,983</td><td>12,582</td><td>$21.41</td><td>241</td><td>1.61%</td><td>$1.33</td><td>211</td><td>$1.52</td><td>0.33</td></tr>
-          <tr class="tot"><td>6-day total</td><td>$1,924.72</td><td>89,896</td><td>75,491</td><td>$21.41</td><td>1,444</td><td>1.61%</td><td>$1.33</td><td>1,268</td><td>$1.52</td><td>2</td></tr>
+          <tr><td>Tue Sep 9</td><td class="big">$393.75</td><td class="big">11,951</td><td>9,247</td><td>$32.95</td><td class="big">184</td><td>1.54%</td><td>$2.14</td><td class="big">160</td><td>$2.46</td><td>0</td></tr>
+          <tr><td>Wed Sep 10</td><td class="big">$369.34</td><td class="big">20,405</td><td>16,424</td><td>$18.10</td><td class="big">196</td><td>0.96%</td><td>$1.88</td><td class="big">157</td><td>$2.35</td><td>1<span class="pill">sale</span></td></tr>
+          <tr><td>Thu Sep 11</td><td class="big">$250.66</td><td class="big">7,576</td><td>6,562</td><td>$33.09</td><td class="big">76</td><td>1.00%</td><td>$3.30</td><td class="big">65</td><td>$3.86</td><td>0</td></tr>
+          <tr><td>Fri Sep 12</td><td class="big">$274.27</td><td class="big">15,748</td><td>13,817</td><td>$17.42</td><td class="big">342</td><td>2.17%</td><td>$0.80</td><td class="big">309</td><td>$0.89</td><td>0</td></tr>
+          <tr><td>Sat Sep 13</td><td class="big">$471.76</td><td class="big">25,740</td><td>20,054</td><td>$18.33</td><td class="big">388</td><td>1.51%</td><td>$1.22</td><td class="big">343</td><td>$1.38</td><td>1<span class="pill">sale</span></td></tr>
+          <tr><td>Sun Sep 14</td><td class="big">$392.82</td><td class="big">17,352</td><td>14,506</td><td>$22.64</td><td class="big">562</td><td>3.24%</td><td>$0.70</td><td class="big">520</td><td>$0.76</td><td>0<span class="pill">consolidated</span></td></tr>
+          <tr class="today"><td>Mon Sep 15</td><td class="big">$266.82</td><td class="big">14,577</td><td>13,549</td><td>$18.30</td><td class="big">367</td><td>2.52%</td><td>$0.73</td><td class="big">329</td><td>$0.81</td><td>0<span class="live">today</span></td></tr>
+          <tr class="avg"><td>Daily average</td><td>$345.63</td><td>16,193</td><td>13,451</td><td>$21.35</td><td>302</td><td>1.87%</td><td>$1.14</td><td>269</td><td>$1.28</td><td>0.29</td></tr>
+          <tr class="tot"><td>7-day total</td><td>$2,419.42</td><td>113,349</td><td>94,159</td><td>$21.35</td><td>2,115</td><td>1.87%</td><td>$1.14</td><td>1,883</td><td>$1.28</td><td>2</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- WEEKLY PLAN -->
-<section class="s-plan">
-  <div class="wrap">
-    <div class="label">The seven-day plan · today through Sunday night</div>
-    <h2>Starting from <span class="serif italic" style="color:#E9C88A">$290</span>,<br/>gradual ramp to $500 a day.</h2>
-
-    <div class="plan-note">
-      <div class="n-lbl">Correction to the baseline</div>
-      <div class="n-txt">Today's active daily budget is $290 on Adset 2 plus $70 on Adset 3, total $360 authorised, $290 realistic delivery. Adset 1 is inactive at $190. The plan below starts from that reality, not from a lower number.</div>
-    </div>
-
-    <p style="max-width:900px">Budget rises only if the previous day held CTR at or above 1.5% and cost per landing-page view at or below $1.75. The plan totals $2,700 over seven days, keeping $800 in reserve of the $3,500 ceiling for a Thursday push if week-to-date sales lag behind two.</p>
-
-    <div class="plan-grid">
-      <div class="pcard today">
-        <div class="pd">Mon 14</div>
-        <div class="pb">$290</div>
-        <div class="pr"><span>Impressions</span><b>13,545</b></div>
-        <div class="pr"><span>Link clicks</span><b>218</b></div>
-        <div class="pr"><span>LPV</span><b>191</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Tue 15</div>
-        <div class="pb">$340</div>
-        <div class="pr"><span>Impressions</span><b>15,880</b></div>
-        <div class="pr"><span>Link clicks</span><b>255</b></div>
-        <div class="pr"><span>LPV</span><b>224</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Wed 16</div>
-        <div class="pb">$400</div>
-        <div class="pr"><span>Impressions</span><b>18,682</b></div>
-        <div class="pr"><span>Link clicks</span><b>300</b></div>
-        <div class="pr"><span>LPV</span><b>264</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Thu 17</div>
-        <div class="pb">$450</div>
-        <div class="pr"><span>Impressions</span><b>21,017</b></div>
-        <div class="pr"><span>Link clicks</span><b>338</b></div>
-        <div class="pr"><span>LPV</span><b>297</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Fri 18</div>
-        <div class="pb">$480</div>
-        <div class="pr"><span>Impressions</span><b>22,418</b></div>
-        <div class="pr"><span>Link clicks</span><b>360</b></div>
-        <div class="pr"><span>LPV</span><b>317</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Sat 19</div>
-        <div class="pb">$500</div>
-        <div class="pr"><span>Impressions</span><b>23,353</b></div>
-        <div class="pr"><span>Link clicks</span><b>375</b></div>
-        <div class="pr"><span>LPV</span><b>330</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-      <div class="pcard">
-        <div class="pd">Sun 20</div>
-        <div class="pb">$500</div>
-        <div class="pr"><span>Impressions</span><b>23,353</b></div>
-        <div class="pr"><span>Link clicks</span><b>375</b></div>
-        <div class="pr"><span>LPV</span><b>330</b></div>
-        <div class="pr"><span>Cost / LPV</span><b>$1.52</b></div>
-      </div>
-    </div>
-
-    <div class="big-projection">
-      <div class="bp">
-        <div class="bl">Weekly plan spend</div>
-        <div class="bv">$2,960</div>
-        <div class="bs">Of the $3,500 authorised ceiling. $540 held in reserve.</div>
-      </div>
-      <div class="bp">
-        <div class="bl">Projected landing-page views</div>
-        <div class="bv">1,953</div>
-        <div class="bs">At baseline CPM $21.41, CTR 1.61%, LPV rate 87.8%.</div>
-      </div>
-      <div class="bp">
-        <div class="bl">CVR needed for 5 sales</div>
-        <div class="bv">0.26%</div>
-        <div class="bs">Current baseline 0.16%. Uplift needed: 1.6×.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCENARIOS -->
-<section class="s-scenario">
-  <div class="wrap">
-    <div class="label">Sales scenarios · 7 days · $2,960 spend · 1,953 landing-page views</div>
-    <h2>What each<br/>checkout CVR<br/><span class="serif italic" style="color:#E9C88A">delivers.</span></h2>
-    <p>Today's checkout converts landing-page views to purchases at 0.16 percent. Anything at or above 0.26 percent clears the five-sale target. Anything at or above 0.50 percent starts printing profit.</p>
-
-    <div class="scn-grid">
-      <div class="scn miss"><div class="cv">0.16% · today</div><div class="sl">3.1</div><div class="cps">$949 per sale</div></div>
-      <div class="scn target"><div class="cv">0.26% · target</div><div class="sl">5.0</div><div class="cps">$592 per sale</div></div>
-      <div class="scn win"><div class="cv">0.50%</div><div class="sl">9.8</div><div class="cps">$303 per sale</div></div>
-      <div class="scn win"><div class="cv">1.00%</div><div class="sl">20</div><div class="cps">$152 per sale</div></div>
-      <div class="scn win"><div class="cv">1.50%</div><div class="sl">29</div><div class="cps">$101 per sale</div></div>
-      <div class="scn win"><div class="cv">2.00%</div><div class="sl">39</div><div class="cps">$76 per sale</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- LEVERS -->
-<section class="s-levers">
-  <div class="wrap">
-    <div class="label">Where the 1.6× lift comes from</div>
-    <h2>Three levers.<br/>All active by<br/><span class="serif italic" style="color:#E9C88A">Tuesday night.</span></h2>
-    <p>Traffic is not the problem. Cost per landing-page view fell 71 percent from Sep 11 at $3.86 to Sep 14 at $0.71. The bottleneck is the last step, and it is a single-week fix.</p>
-
-    <div class="levers-grid">
-      <div class="lever">
-        <div class="lbl">Lever 01</div>
-        <h3>Checkout page</h3>
-        <div class="up">+80%</div>
-        <p>Anchor the $179 by 5 and $799 upfront paths above the fold. Add trust row: guarantee, secure badge, refund window. Remove any field not required for Stripe. Persist selection across retries. Verify Meta fbc passes on all three checkout copies before Wednesday.</p>
-      </div>
-      <div class="lever">
-        <div class="lbl">Lever 02</div>
-        <h3>Creative rotation</h3>
-        <div class="up">+40%</div>
-        <p>Adset 1 is inactive at $190. Reactivate only if the new creative lands. Push spend into the Sep 14 winner: CTR 3.04 percent, cost per LPV $0.71. Launch two new hooks Tuesday: Julie masterclass, biological-age result. Compare 1-day and 7-day click windows.</p>
-      </div>
-      <div class="lever">
-        <div class="lbl">Lever 03</div>
-        <h3>Retargeting layer</h3>
-        <div class="up">+2 sales</div>
-        <p>1,268 landing-page views in six days is a real remarketing pool. Warm audience of LPV in the last 14 days, $50 a day retargeting ad set starting Tuesday. Message is risk reversal: refund window, payment plan, secure checkout. Historically delivers 1.2× to 2× baseline CVR.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOTTOM -->
-<section class="s-bottom">
-  <div class="wrap">
-    <div class="label">Bottom line</div>
-    <h2>Five sales in seven days is <span class="serif italic" style="color:#E9C88A">realistic.</span><br/>Not on autopilot.</h2>
-    <div class="bottom-num">$2,960</div>
-    <p style="font-size:26px;max-width:960px">The media plan delivers the traffic. The plan spends $2,960 of the $3,500 authorised ceiling and reserves $540 for a Thursday push if week-to-date sales lag behind two. The plan holds if checkout CVR moves from 0.16 percent to 0.26 percent of landing-page views. That is a single-lever change, most closable at the payment step.</p>
-  </div>
-</section>
-
 <footer>
-  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads export, Sep 9 to 14, 2026, all active ecommerce ad sets. Baselines used for the seven-day forecast: CPM $21.41, CTR 1.61%, LPV rate 87.8%, cost per LPV $1.52. Today's baseline daily budget: $290 on Adset 2 active, $70 on Adset 3 active, $190 on Adset 1 inactive.
+  Built for Omri Gitter · GiTA Agency. Data source: Meta Ads API, campaign LGV_EN_PPC_ecomm-01_2026-09-02_#118148, Sep 9 to Sep 15, 2026. All active ecommerce ad sets. Sep 14: consolidation of ecomm Adset 1 into ecomm Adset 2. Sep 15 partial — day still delivering at time of pull.
 </footer>
 
 </body>
